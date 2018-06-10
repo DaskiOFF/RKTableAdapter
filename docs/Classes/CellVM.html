@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CellVM Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CellVM" class="dashAnchor"></a>
+    <a title="CellVM Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RKTableAdapter Docs</a> (46% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RKTableAdapter Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CellVM Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Main.html">Main</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/TableViewAdapter.html">TableViewAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableAdapterCallbacks.html">TableAdapterCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableAdapterScrollViewCallbacks.html">TableAdapterScrollViewCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableList.html">TableList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableSection.html">TableSection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableRow.html">TableRow</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Cell ViewModel.html">Cell ViewModel</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CellVM.html">CellVM</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Cell.html">Cell</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConfigurableCell.html">ConfigurableCell</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Internal.html">Internal</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConfigureCell.html">ConfigureCell</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Standard Rows.html">Standard Rows</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Standard Rows.html#/s:14RKTableAdapter14TableRowSwitchC">TableRowSwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableSwitchCell.html">TableSwitchCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableSwitchCellVM.html">TableSwitchCellVM</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CellVM</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">CellVM</span> <span class="p">:</span> <span class="kt">RowHeightComputable</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
+
+                </div>
+              </div>
+            <p>Родительский класс для любой ViewModel ячейки</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Types"></a>
+                <a name="//apple_ref/swift/Section/Types" class="dashAnchor"></a>
+                <a href="#/Types">
+                  <h3 class="section-name">Types</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter6CellVMC12UserInfoTypea"></a>
+                    <a name="//apple_ref/swift/Alias/UserInfoType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter6CellVMC12UserInfoTypea">UserInfoType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">UserInfoType</span> <span class="o">=</span> <span class="kt">Any</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter6CellVMC10ActionTypea"></a>
+                    <a name="//apple_ref/swift/Alias/ActionType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter6CellVMC10ActionTypea">ActionType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Тип замыкания действия при нажатии на ячейку</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ActionType</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Classes/CellVM.html#/s:14RKTableAdapter6CellVMC12UserInfoTypea">UserInfoType</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter6CellVMC21deselectAutomaticallySbvp"></a>
+                    <a name="//apple_ref/swift/Property/deselectAutomatically" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter6CellVMC21deselectAutomaticallySbvp">deselectAutomatically</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Автоматически снимать выделение</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">deselectAutomatically</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter6CellVMC12isSelectableSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isSelectable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter6CellVMC12isSelectableSbvp">isSelectable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Выделяемая ячейка или нет</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isSelectable</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter6CellVMC13accessoryTypeSC011UITableViewc9AccessoryF0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/accessoryType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter6CellVMC13accessoryTypeSC011UITableViewc9AccessoryF0Ovp">accessoryType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">accessoryType</span><span class="p">:</span> <span class="kt">UITableViewCellAccessoryType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/DidSelectAction%20and%20data"></a>
+                <a name="//apple_ref/swift/Section/DidSelectAction and data" class="dashAnchor"></a>
+                <a href="#/DidSelectAction%20and%20data">
+                  <h3 class="section-name">DidSelectAction and data</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter6CellVMC6actionyypSgcSgvp"></a>
+                    <a name="//apple_ref/swift/Property/action" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter6CellVMC6actionyypSgcSgvp">action</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Действие, которое вызывается при нажатии на ячейку</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">CellVM</span><span class="o">.</span><span class="kt"><a href="../Classes/CellVM.html#/s:14RKTableAdapter6CellVMC10ActionTypea">ActionType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter6CellVMC8userInfoypSgvp"></a>
+                    <a name="//apple_ref/swift/Property/userInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter6CellVMC8userInfoypSgvp">userInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Данные, которые передаются в замыкание действия, если эти данные nil, то в замыкание будет передана viewModel (self)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="kt">CellVM</span><span class="o">.</span><span class="kt"><a href="../Classes/CellVM.html#/s:14RKTableAdapter6CellVMC12UserInfoTypea">UserInfoType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Init"></a>
+                <a name="//apple_ref/swift/Section/Init" class="dashAnchor"></a>
+                <a href="#/Init">
+                  <h3 class="section-name">Init</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter6CellVMCACyypSgcSg6action_AD8userInfotcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(action:userInfo:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter6CellVMCACyypSgcSg6action_AD8userInfotcfc">init(action:userInfo:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../Classes/CellVM.html#/s:14RKTableAdapter6CellVMC10ActionTypea">ActionType</a></span><span class="p">?,</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/CellVM.html#/s:14RKTableAdapter6CellVMC12UserInfoTypea">UserInfoType</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/RowHeightComputable"></a>
+                <a name="//apple_ref/swift/Section/RowHeightComputable" class="dashAnchor"></a>
+                <a href="#/RowHeightComputable">
+                  <h3 class="section-name">RowHeightComputable</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter6CellVMC15estimatedHeight12CoreGraphics7CGFloatVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/estimatedHeight" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter6CellVMC15estimatedHeight12CoreGraphics7CGFloatVSgvp">estimatedHeight</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">estimatedHeight</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter6CellVMC13defaultHeight12CoreGraphics7CGFloatVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/defaultHeight" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter6CellVMC13defaultHeight12CoreGraphics7CGFloatVSgvp">defaultHeight</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">defaultHeight</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Bind%20/%20Unbind"></a>
+                <a name="//apple_ref/swift/Section/Bind / Unbind" class="dashAnchor"></a>
+                <a href="#/Bind%20/%20Unbind">
+                  <h3 class="section-name">Bind / Unbind</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter6CellVMC4viewAA09ConfigureC0_pSgXwvp"></a>
+                    <a name="//apple_ref/swift/Property/view" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter6CellVMC4viewAA09ConfigureC0_pSgXwvp">view</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConfigureCell.html">ConfigureCell</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2018 <a class="link" href="http://t.me/daskioff" target="_blank" rel="external">DaskiOFF</a> under MIT License</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

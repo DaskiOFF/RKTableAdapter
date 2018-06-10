@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TableViewAdapter Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/TableViewAdapter" class="dashAnchor"></a>
+    <a title="TableViewAdapter Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RKTableAdapter Docs</a> (46% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RKTableAdapter Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TableViewAdapter Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Main.html">Main</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/TableViewAdapter.html">TableViewAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableAdapterCallbacks.html">TableAdapterCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableAdapterScrollViewCallbacks.html">TableAdapterScrollViewCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableList.html">TableList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableSection.html">TableSection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableRow.html">TableRow</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Cell ViewModel.html">Cell ViewModel</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CellVM.html">CellVM</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Cell.html">Cell</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConfigurableCell.html">ConfigurableCell</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Internal.html">Internal</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConfigureCell.html">ConfigureCell</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Standard Rows.html">Standard Rows</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Standard Rows.html#/s:14RKTableAdapter14TableRowSwitchC">TableRowSwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableSwitchCell.html">TableSwitchCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableSwitchCellVM.html">TableSwitchCellVM</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TableViewAdapter</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">TableViewAdapter</span></code></pre>
+
+                </div>
+              </div>
+            <p>Для работы с TableViewAdapter</p>
+
+<ul>
+<li>Ячейка должна реализовывать протокол ConfigurableCell</li>
+<li><p>ViewModel ячейки должна наследоваться от CellVM</p></li>
+<li><p>Необходимо его создать используя UITableView</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span> <span class="o">=</span> <span class="kt">UITableView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="o">.</span><span class="n">zero</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">grouped</span><span class="p">)</span>
+<span class="kd">lazy</span> <span class="k">var</span> <span class="nv">tableAdapter</span> <span class="o">=</span> <span class="kt">TableViewAdapter</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="p">)</span>
+</code></pre></li>
+<li><p>Создать контент для таблицы</p>
+<pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">configureTableAdapterContent</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">tableList</span> <span class="o">=</span> <span class="kt">TableList</span><span class="p">()</span>
+
+    <span class="nf">makeMySection</span><span class="p">(</span><span class="n">tableList</span><span class="p">)</span>
+
+    <span class="n">tableAdapter</span><span class="o">.</span><span class="nf">reload</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">tableList</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">private</span> <span class="kd">func</span> <span class="nf">makeMySection</span><span class="p">(</span><span class="n">_</span> <span class="nv">list</span><span class="p">:</span> <span class="kt">TableList</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">section</span> <span class="o">=</span> <span class="n">list</span><span class="p">[</span><span class="s">"mySection"</span><span class="p">]</span>
+    <span class="n">section</span><span class="o">.</span><span class="n">headerHeight</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">section</span><span class="o">.</span><span class="n">footerHeight</span> <span class="o">=</span> <span class="mi">40</span>
+
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">viewModel</span> <span class="o">=</span> <span class="kt">TableSwitchCellVM</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Автосохранение"</span><span class="p">,</span> <span class="nv">isOn</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="n">vmAutosave</span><span class="o">.</span><span class="n">changeAction</span> <span class="o">=</span> <span class="n">autosaveStateChanged</span>
+
+        <span class="k">let</span> <span class="nv">switchRow</span> <span class="o">=</span> <span class="kt">TableRowSwitch</span><span class="p">(</span><span class="nv">viewModel</span><span class="p">:</span> <span class="n">vmAutosave</span><span class="p">)</span>
+        <span class="n">section</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="nv">row</span><span class="p">:</span> <span class="n">switchRow</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">vm</span> <span class="o">=</span> <span class="kt">MenuItemCellVM</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Поделиться"</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="n">share</span><span class="p">)</span>
+        <span class="n">section</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="nv">row</span><span class="p">:</span> <span class="kt">TableRow</span><span class="o">&lt;</span><span class="kt">MenuItemCell</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"share"</span><span class="p">,</span> <span class="nv">viewModel</span><span class="p">:</span> <span class="n">vm</span><span class="p">))</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></li>
+<li><p>Описать замыкания для действий</p>
+<pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">share</span><span class="p">:</span> <span class="kt">CellVM</span><span class="o">.</span><span class="kt">ActionType</span> <span class="o">=</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">_</span> <span class="k">in</span>
+    <span class="k">guard</span> <span class="k">let</span> <span class="nv">sself</span> <span class="o">=</span> <span class="k">self</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+
+    <span class="c1">// do sth...</span>
+<span class="p">}</span>
+</code></pre></li>
+<li><p>Если необходимо настроить обработку callbacks, то это делаем в методе</p>
+<pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">setupTableAdapter</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// tableAdapter.callbacks...</span>
+    <span class="c1">// tableAdapter.scrollViewCallbacks...</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>который вызываем из viewDidLoad</p></li>
+<li><p>Для перезагрузки таблицы</p>
+<pre class="highlight swift"><code><span class="n">tableAdapter</span><span class="o">.</span><span class="nf">reload</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">tableList</span><span class="p">)</span>
+</code></pre></li>
+</ul>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter09TableViewB0C4listAA0C4ListCvp"></a>
+                    <a name="//apple_ref/swift/Property/list" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter09TableViewB0C4listAA0C4ListCvp">list</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Описание данных таблицы</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">list</span><span class="p">:</span> <span class="kt"><a href="../Classes/TableList.html">TableList</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Callbacks"></a>
+                <a name="//apple_ref/swift/Section/Callbacks" class="dashAnchor"></a>
+                <a href="#/Callbacks">
+                  <h3 class="section-name">Callbacks</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter09TableViewB0C9callbacksAA0cB9CallbacksCvp"></a>
+                    <a name="//apple_ref/swift/Property/callbacks" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter09TableViewB0C9callbacksAA0cB9CallbacksCvp">callbacks</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Обработка методов таблицы</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">callbacks</span><span class="p">:</span> <span class="kt"><a href="../Classes/TableAdapterCallbacks.html">TableAdapterCallbacks</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter09TableViewB0C06scrollD9CallbacksAA0cb6ScrolldF0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/scrollViewCallbacks" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter09TableViewB0C06scrollD9CallbacksAA0cb6ScrolldF0Cvp">scrollViewCallbacks</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Обработка методов scrollView</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scrollViewCallbacks</span><span class="p">:</span> <span class="kt"><a href="../Classes/TableAdapterScrollViewCallbacks.html">TableAdapterScrollViewCallbacks</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Dependencies"></a>
+                <a name="//apple_ref/swift/Section/Dependencies" class="dashAnchor"></a>
+                <a href="#/Dependencies">
+                  <h3 class="section-name">Dependencies</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter09TableViewB0C05tableD0So07UITableD0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/tableView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter09TableViewB0C05tableD0So07UITableD0Cvp">tableView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/LifeCycle"></a>
+                <a name="//apple_ref/swift/Section/LifeCycle" class="dashAnchor"></a>
+                <a href="#/LifeCycle">
+                  <h3 class="section-name">LifeCycle</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter09TableViewB0CACSo07UITableD0C05tableD0_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(tableView:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter09TableViewB0CACSo07UITableD0C05tableD0_tcfc">init(tableView:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Reload"></a>
+                <a name="//apple_ref/swift/Section/Reload" class="dashAnchor"></a>
+                <a href="#/Reload">
+                  <h3 class="section-name">Reload</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter09TableViewB0C6reloadyAA0C4ListCSg4with_tF"></a>
+                    <a name="//apple_ref/swift/Method/reload(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter09TableViewB0C6reloadyAA0C4ListCSg4with_tF">reload(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reload</span><span class="p">(</span><span class="n">with</span> <span class="nv">tableList</span><span class="p">:</span> <span class="kt"><a href="../Classes/TableList.html">TableList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2018 <a class="link" href="http://t.me/daskioff" target="_blank" rel="external">DaskiOFF</a> under MIT License</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

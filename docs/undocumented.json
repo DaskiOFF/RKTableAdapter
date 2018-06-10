@@ -1,0 +1,376 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 3,
+      "symbol": "TableAdapterCallbacks",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 5,
+      "symbol": "TableAdapterCallbacks.TableData",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 10,
+      "symbol": "TableAdapterCallbacks.CanEditRow",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 11,
+      "symbol": "TableAdapterCallbacks.EditingStyleRow",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 12,
+      "symbol": "TableAdapterCallbacks.CommitEditRow",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 18,
+      "symbol": "TableAdapterCallbacks.setCanEditRow(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 21,
+      "symbol": "TableAdapterCallbacks.setEditingStyleRow(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 24,
+      "symbol": "TableAdapterCallbacks.setCommitEditRow(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 29,
+      "symbol": "TableAdapterCallbacks.WillDisplayHeaderFooterView",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 30,
+      "symbol": "TableAdapterCallbacks.DidEndDisplayHeaderFooterView",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 37,
+      "symbol": "TableAdapterCallbacks.setWillDisplayHeaderView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 40,
+      "symbol": "TableAdapterCallbacks.setWillDisplayFooterView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 43,
+      "symbol": "TableAdapterCallbacks.setDidEndDisplayHeaderView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterCallbacks.swift",
+      "line": 46,
+      "symbol": "TableAdapterCallbacks.setDidEndDisplayFooterView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterScrollViewCallbacks.swift",
+      "line": 3,
+      "symbol": "TableAdapterScrollViewCallbacks",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterScrollViewCallbacks.swift",
+      "line": 9,
+      "symbol": "TableAdapterScrollViewCallbacks.ScrollViewDidScroll",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Callbacks/TableAdapterScrollViewCallbacks.swift",
+      "line": 13,
+      "symbol": "TableAdapterScrollViewCallbacks.setScrollViewDidScroll(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Extensions/UITableView.swift",
+      "line": 4,
+      "symbol": "UITableView.emptyFooter()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Extensions/UITableView.swift",
+      "line": 8,
+      "symbol": "UITableView.emptyHeader()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/Additionals/ConfigurableCell.swift",
+      "line": 15,
+      "symbol": "ConfigureCell",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/Additionals/ConfigurableCell.swift",
+      "line": 27,
+      "symbol": "ConfigurableCell.viewModel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/Additionals/RowConfigurable.swift",
+      "line": 13,
+      "symbol": "CellVM.UserInfoType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/Additionals/RowConfigurable.swift",
+      "line": 22,
+      "symbol": "CellVM.accessoryType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/Additionals/RowConfigurable.swift",
+      "line": 31,
+      "symbol": "CellVM.init(action:userInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/Additionals/RowConfigurable.swift",
+      "line": 37,
+      "symbol": "CellVM.estimatedHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/Additionals/RowConfigurable.swift",
+      "line": 38,
+      "symbol": "CellVM.defaultHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/Additionals/RowConfigurable.swift",
+      "line": 41,
+      "symbol": "CellVM.view",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 3,
+      "symbol": "TableRowSwitch",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 6,
+      "symbol": "TableSwitchCellVM",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 7,
+      "symbol": "TableSwitchCellVM.ChangeActionType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 9,
+      "symbol": "TableSwitchCellVM.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 12,
+      "symbol": "TableSwitchCellVM.isOn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 15,
+      "symbol": "TableSwitchCellVM.isEnabled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 18,
+      "symbol": "TableSwitchCellVM.changeAction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 21,
+      "symbol": "TableSwitchCellVM.init(title:isOn:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 30,
+      "symbol": "TableSwitchCellVM.defaultHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 40,
+      "symbol": "TableSwitchCellVM.setChangeAction(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 46,
+      "symbol": "TableSwitchCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 50,
+      "symbol": "TableSwitchCell.viewModel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 62,
+      "symbol": "TableSwitchCell.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 66,
+      "symbol": "TableSwitchCell.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 71,
+      "symbol": "TableSwitchCell.prepareForReuse()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/StandardRows/TableRowSwitch.swift",
+      "line": 77,
+      "symbol": "TableSwitchCell.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/TableList.swift",
+      "line": 10,
+      "symbol": "TableList.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/TableRow.swift",
+      "line": 3,
+      "symbol": "TableRow",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/TableRow.swift",
+      "line": 16,
+      "symbol": "TableRow.init(viewModel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/TableRow.swift",
+      "line": 21,
+      "symbol": "TableRow.init(id:viewModel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/TableRow.swift",
+      "line": 26,
+      "symbol": "TableRow.init(id:viewModel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/TableSection.swift",
+      "line": 3,
+      "symbol": "TableSection",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/Models/TableSection.swift",
+      "line": 29,
+      "symbol": "TableSection.init(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableViewAdapter.swift",
+      "line": 79,
+      "symbol": "TableViewAdapter.tableView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableViewAdapter.swift",
+      "line": 82,
+      "symbol": "TableViewAdapter.init(tableView:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableViewAdapter.swift",
+      "line": 91,
+      "symbol": "TableViewAdapter.reload(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter"
+}

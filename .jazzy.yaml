@@ -1,0 +1,39 @@
+module: RKTableAdapter
+author: DaskiOFF
+author_url: http://t.me/daskioff
+clean: true
+
+copyright: '© 2018 [DaskiOFF](http://t.me/daskioff) under MIT License'
+
+swift_version: 4.1
+
+custom_categories:
+  - name: Main
+    children:
+    - TableViewAdapter
+    - TableAdapterCallbacks
+    - TableAdapterScrollViewCallbacks
+    - TableList
+    - TableSection
+    - TableRow
+
+  - name: Cell ViewModel
+    children:
+    - CellVM
+
+  - name: Cell
+    children:
+    - ConfigurableCell
+
+  - name: Internal
+    children:
+    - BindingCell
+    - ConfigureCell
+    - RowConfigurable
+    - RowHeightComputable
+
+  - name: Standard Rows
+    children:
+    - TableRowSwitch
+    - TableSwitchCell
+    - TableSwitchCellVM
