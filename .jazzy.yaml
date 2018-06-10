@@ -1,6 +1,7 @@
 module: RKTableAdapter
 author: DaskiOFF
 author_url: http://t.me/daskioff
+github_url: https://github.com/DaskiOFF/RKTableAdapter
 clean: true
 
 copyright: '© 2018 [DaskiOFF](http://t.me/daskioff) under MIT License'

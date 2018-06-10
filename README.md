@@ -8,6 +8,7 @@
 ## Documentations
 
 https://daskioff.github.io/RKTableAdapter/
+
 How use -> https://daskioff.github.io/RKTableAdapter/Classes/TableViewAdapter.html
 
 ## Requirements
