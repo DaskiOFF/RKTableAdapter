@@ -1,0 +1,16 @@
+PODS:
+  - DeepDiff (1.2.0)
+
+DEPENDENCIES:
+  - DeepDiff
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DeepDiff
+
+SPEC CHECKSUMS:
+  DeepDiff: 0ee83ac6942d441f677c22e981548c6e0937f2b6
+
+PODFILE CHECKSUM: bb8aa026361ac05434f8aab996da9826d729bc98
+
+COCOAPODS: 1.5.3

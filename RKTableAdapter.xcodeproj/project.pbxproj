@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21C956F151CC5E59DCEC29FC /* Pods_RKTableAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAE15F7C2E98799ECE62BCD /* Pods_RKTableAdapter.framework */; };
+		5C13D80885E76B478B210A5E /* Pods_RKTableAdapterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1C9BB09AF6DF2C13C03179 /* Pods_RKTableAdapterTests.framework */; };
 		BB6884B420CDD6EA00B507BB /* RKTableAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6884AA20CDD6EA00B507BB /* RKTableAdapter.framework */; };
 		BB6884B920CDD6EA00B507BB /* RKTableAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884B820CDD6EA00B507BB /* RKTableAdapterTests.swift */; };
 		BB6884BB20CDD6EA00B507BB /* RKTableAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB6884AD20CDD6EA00B507BB /* RKTableAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20DFE68BDAECADB92458A50C /* Pods-RKTableAdapterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKTableAdapterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RKTableAdapterTests/Pods-RKTableAdapterTests.release.xcconfig"; sourceTree = "<group>"; };
+		2EAE15F7C2E98799ECE62BCD /* Pods_RKTableAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKTableAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E1C9BB09AF6DF2C13C03179 /* Pods_RKTableAdapterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKTableAdapterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E02650EC89A15BDAADBE4F8 /* Pods-RKTableAdapterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKTableAdapterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RKTableAdapterTests/Pods-RKTableAdapterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACE86E722023D6081941E424 /* Pods-RKTableAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKTableAdapter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RKTableAdapter/Pods-RKTableAdapter.debug.xcconfig"; sourceTree = "<group>"; };
 		BB6884AA20CDD6EA00B507BB /* RKTableAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RKTableAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6884AD20CDD6EA00B507BB /* RKTableAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKTableAdapter.h; sourceTree = "<group>"; };
 		BB6884AE20CDD6EA00B507BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,7 @@
 		BB6884D020CDD74A00B507BB /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		BB6884D120CDD74A00B507BB /* RowConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowConfigurable.swift; sourceTree = "<group>"; };
 		BB6884D320CDD74A00B507BB /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		C8D0D66D03ACA336BAE61E10 /* Pods-RKTableAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKTableAdapter.release.xcconfig"; path = "Pods/Target Support Files/Pods-RKTableAdapter/Pods-RKTableAdapter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C956F151CC5E59DCEC29FC /* Pods_RKTableAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6884B420CDD6EA00B507BB /* RKTableAdapter.framework in Frameworks */,
+				5C13D80885E76B478B210A5E /* Pods_RKTableAdapterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +86,8 @@
 				BB6884AC20CDD6EA00B507BB /* RKTableAdapter */,
 				BB6884B720CDD6EA00B507BB /* RKTableAdapterTests */,
 				BB6884AB20CDD6EA00B507BB /* Products */,
+				C70C49DF62816E991031879F /* Pods */,
+				FF6C499D26DE6449649576F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +176,26 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C70C49DF62816E991031879F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACE86E722023D6081941E424 /* Pods-RKTableAdapter.debug.xcconfig */,
+				C8D0D66D03ACA336BAE61E10 /* Pods-RKTableAdapter.release.xcconfig */,
+				7E02650EC89A15BDAADBE4F8 /* Pods-RKTableAdapterTests.debug.xcconfig */,
+				20DFE68BDAECADB92458A50C /* Pods-RKTableAdapterTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF6C499D26DE6449649576F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EAE15F7C2E98799ECE62BCD /* Pods_RKTableAdapter.framework */,
+				4E1C9BB09AF6DF2C13C03179 /* Pods_RKTableAdapterTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -182,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB6884BE20CDD6EA00B507BB /* Build configuration list for PBXNativeTarget "RKTableAdapter" */;
 			buildPhases = (
+				E3A7E8ED18376A4C0A213856 /* [CP] Check Pods Manifest.lock */,
 				BB6884A520CDD6EA00B507BB /* Sources */,
 				BB6884A620CDD6EA00B507BB /* Frameworks */,
 				BB6884A720CDD6EA00B507BB /* Headers */,
@@ -200,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB6884C120CDD6EA00B507BB /* Build configuration list for PBXNativeTarget "RKTableAdapterTests" */;
 			buildPhases = (
+				D0D436AA940E98E53BD81A1B /* [CP] Check Pods Manifest.lock */,
 				BB6884AF20CDD6EA00B507BB /* Sources */,
 				BB6884B020CDD6EA00B507BB /* Frameworks */,
 				BB6884B120CDD6EA00B507BB /* Resources */,
+				16427BC1B233B21A22522113 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +301,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16427BC1B233B21A22522113 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RKTableAdapterTests/Pods-RKTableAdapterTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DeepDiff/DeepDiff.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeepDiff.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RKTableAdapterTests/Pods-RKTableAdapterTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0D436AA940E98E53BD81A1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RKTableAdapterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3A7E8ED18376A4C0A213856 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RKTableAdapter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BB6884A520CDD6EA00B507BB /* Sources */ = {
@@ -426,6 +518,7 @@
 		};
 		BB6884BF20CDD6EA00B507BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACE86E722023D6081941E424 /* Pods-RKTableAdapter.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +543,7 @@
 		};
 		BB6884C020CDD6EA00B507BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8D0D66D03ACA336BAE61E10 /* Pods-RKTableAdapter.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -474,6 +568,7 @@
 		};
 		BB6884C220CDD6EA00B507BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E02650EC89A15BDAADBE4F8 /* Pods-RKTableAdapterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -492,6 +587,7 @@
 		};
 		BB6884C320CDD6EA00B507BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20DFE68BDAECADB92458A50C /* Pods-RKTableAdapterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
