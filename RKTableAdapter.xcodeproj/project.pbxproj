@@ -22,6 +22,7 @@
 		BB6884DB20CDD74A00B507BB /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884D020CDD74A00B507BB /* ConfigurableCell.swift */; };
 		BB6884DC20CDD74A00B507BB /* RowConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884D120CDD74A00B507BB /* RowConfigurable.swift */; };
 		BB6884DD20CDD74A00B507BB /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884D320CDD74A00B507BB /* UITableView.swift */; };
+		BBBC38D620F3E212001B8ED4 /* TableViewAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		BB6884D020CDD74A00B507BB /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		BB6884D120CDD74A00B507BB /* RowConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowConfigurable.swift; sourceTree = "<group>"; };
 		BB6884D320CDD74A00B507BB /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterDelegate.swift; sourceTree = "<group>"; };
 		C8D0D66D03ACA336BAE61E10 /* Pods-RKTableAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKTableAdapter.release.xcconfig"; path = "Pods/Target Support Files/Pods-RKTableAdapter/Pods-RKTableAdapter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				BB6884C520CDD74A00B507BB /* TableViewAdapter.swift */,
+				BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */,
 				BB6884C620CDD74A00B507BB /* Callbacks */,
 				BB6884C920CDD74A00B507BB /* Models */,
 				BB6884D220CDD74A00B507BB /* Extensions */,
@@ -369,6 +372,7 @@
 				BB6884D420CDD74A00B507BB /* TableViewAdapter.swift in Sources */,
 				BB6884DB20CDD74A00B507BB /* ConfigurableCell.swift in Sources */,
 				BB6884D920CDD74A00B507BB /* TableSection.swift in Sources */,
+				BBBC38D620F3E212001B8ED4 /* TableViewAdapterDelegate.swift in Sources */,
 				BB6884D820CDD74A00B507BB /* TableRow.swift in Sources */,
 				BB6884D720CDD74A00B507BB /* TableList.swift in Sources */,
 				BB6884DD20CDD74A00B507BB /* UITableView.swift in Sources */,
@@ -528,6 +532,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RKTableAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -553,6 +558,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RKTableAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

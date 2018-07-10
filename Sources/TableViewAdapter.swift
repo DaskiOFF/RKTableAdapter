@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import DeepDiff
 
 /// Для работы с TableViewAdapter
 /// - Ячейка должна реализовывать протокол ConfigurableCell
@@ -86,17 +87,7 @@ open class TableViewAdapter {
         self.tableView.delegate = tableViewDelegate
         self.tableView.dataSource = tableViewDelegate
     }
-    
-    // MARK: - Reload
-    public func reload(with tableList: TableList? = nil) {
-        if let list = tableList {
-            self._list = list
-        }
-        
-        registerCells()
-        tableView.reloadData()
-    }
-    
+
     // MARK: - Private
     fileprivate func registerCells() {
         for section in list.sections {
@@ -105,164 +96,38 @@ open class TableViewAdapter {
             }
         }
     }
-}
 
-class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
-    unowned var holder: TableViewAdapter
-    var automaticHeaderFooterHeight: CGFloat = 0
-    
-    // MARK: - Init
-    init(holder: TableViewAdapter) {
-        self.holder = holder
-        if holder.tableView.style == .grouped {
-            self.automaticHeaderFooterHeight = UITableViewAutomaticDimension
+    // MARK: - Reload
+    public func reload(with tableList: TableList? = nil) {
+        let oldList = self._list
+
+        if let list = tableList {
+            self._list = list
+        } else {
+            self._list = TableList()
         }
-    }
-    
-    // MARK: - getters
-    private func section(for index: Int) -> TableSection? {
-        guard index < holder.list.sections.count else { return nil }
-        return holder.list.sections[index]
-    }
-    
-    private func row(for section: TableSection, index: Int) -> RowConfigurable? {
-        guard index < section.rows.count else { return nil }
-        return section.rows[index]
-    }
-    
-    // MARK: - UITableViewDelegate, UITableViewDataSource
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let row = holder.list.sections[indexPath.section].rows[indexPath.row]
-        return row.defaultHeight ??
-            row.estimatedHeight ??
-        UITableViewAutomaticDimension
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let section = section(for: indexPath.section),
-            let row = row(for: section, index: indexPath.row)
-            else { return }
-        
-        if row.cellVM.deselectAutomatically {
-            tableView.deselectRow(at: indexPath, animated: true)
+        registerCells()
+
+        if oldList.sections.isEmpty || self._list.sections.isEmpty {
+            tableView.reloadData()
+            return
         }
-        row.cellVM.action?(row.cellVM.userInfo ?? row.cellVM)
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return holder.list.sections.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return holder.list.sections[section].rows.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let row = section(for: indexPath.section)?.rows[indexPath.row] else { fatalError() }
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: row.reuseId) else { fatalError() }
-        
-        cell.selectionStyle = row.cellVM.isSelectable ? .default : .none
-        row.configure(cell)
-        if let bindingCell = cell as? BindingCell & ConfigureCell {
-            row.cellVM.bind(view: bindingCell)
-        }
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let row = section(for: indexPath.section)?.rows[indexPath.row] else { return }
-        
-        if let bindingCell = cell as? BindingCell & ConfigureCell {
-            row.cellVM.bind(view: bindingCell)
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let bindingCell = cell as? BindingCell {
-            bindingCell.unbind()   
-        }
-    }
-    
-    // MARK: Edit
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        guard let section = section(for: indexPath.section),
-            let row = row(for: section, index: indexPath.row)
-            else { return false }
-        return holder.callbacks.canEditRow?(tableView, indexPath, (section, row)) ?? false
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        guard let section = section(for: indexPath.section),
-            let row = row(for: section, index: indexPath.row)
-            else { return }
-        holder.callbacks.commitEditRow?(tableView, indexPath, editingStyle, (section, row))
-    }
-    
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
-        guard let section = section(for: indexPath.section),
-            let row = row(for: section, index: indexPath.row)
-            else { return .none }
-        return holder.callbacks.editingStyleRow?(tableView, indexPath, (section, row)) ?? .none
-    }
-    
-    // MARK: Header / Footer
-    // Header
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let section = self.section(for: section), section.headerView == nil else { return nil }
-        return section.headerString
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let section = self.section(for: section) else { return nil }
-        return section.headerView
-    }
 
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        guard let section = self.section(for: section) else {
-            return automaticHeaderFooterHeight
-        }
-        return section.headerHeight ?? automaticHeaderFooterHeight
-    }
+//        let diffSectionsResult = diff(old: oldList.sections, new: list.sections)
+//        for changeValue in diffSectionsResult {
+//            switch changeValue {
+//            case .delete(let del):
+//                ()
+//                
+//            case .insert(let ins):
+//                ()
+//            case .move(let move):
+//                ()
+//            case .replace(let repl):
+//                ()
+//            }
+//        }
 
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        guard let tableSection = self.section(for: section) else { return }
-        holder.callbacks.willDisplayHeaderView?(tableView, view, tableSection, section)
-    }
-
-    func tableView(_ tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
-        guard let tableSection = self.section(for: section) else { return }
-        holder.callbacks.didEndDisplayHeaderView?(tableView, view, tableSection, section)
-    }
-    
-    // Footer
-    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        guard let section = self.section(for: section), section.footerView == nil else { return nil }
-        return section.footerString
-    }
-
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        guard let section = self.section(for: section) else { return nil }
-        return section.footerView
-    }
-
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        guard let section = self.section(for: section) else { return automaticHeaderFooterHeight }
-        return section.footerHeight ?? automaticHeaderFooterHeight
-    }
-
-    func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-        guard let tableSection = self.section(for: section) else { return }
-        holder.callbacks.willDisplayFooterView?(tableView, view, tableSection, section)
-    }
-
-    func tableView(_ tableView: UITableView, didEndDisplayingFooterView view: UIView, forSection section: Int) {
-        guard let tableSection = self.section(for: section) else { return }
-        holder.callbacks.didEndDisplayFooterView?(tableView, view, tableSection, section)
-    }
-    
-    // MARK: - ScroolViewDelegate
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        holder.scrollViewCallbacks.scrollViewDidScroll?(scrollView)
+        tableView.reloadData()
     }
 }

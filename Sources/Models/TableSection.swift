@@ -1,6 +1,6 @@
 import Foundation
 
-open class TableSection  {
+open class TableSection: Hashable  {
     // MARK: - Properties
     /// Идентификатор
     public let id: String
@@ -108,5 +108,14 @@ open class TableSection  {
             
             return nil
         }
+    }
+
+    // MARK: - Hashable
+    public var hashValue: Int {
+        return id.hashValue
+    }
+
+    public static func == (lhs: TableSection, rhs: TableSection) -> Bool {
+        return lhs.id == rhs.id
     }
 }

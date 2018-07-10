@@ -1,0 +1,23 @@
+PODS:
+  - DeepDiff (1.2.0)
+  - RKTableAdapter (0.1.0):
+    - DeepDiff (= 1.2.0)
+
+DEPENDENCIES:
+  - RKTableAdapter (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DeepDiff
+
+EXTERNAL SOURCES:
+  RKTableAdapter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DeepDiff: 0ee83ac6942d441f677c22e981548c6e0937f2b6
+  RKTableAdapter: 27789a331c52fe57c139d15a852af66482cf20b0
+
+PODFILE CHECKSUM: 053520554ca25f6d1408fc0ee8a805717f15b0e5
+
+COCOAPODS: 1.5.3
