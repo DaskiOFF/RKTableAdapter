@@ -18,10 +18,17 @@ class JustCell: UITableViewCell, ConfigurableCell {
     // MARK: - UI
 
     // MARK: - Init
+    #if swift(>=4.2)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        configure()
+    }
+    #else
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configure()
     }
+    #endif
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
