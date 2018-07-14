@@ -3,7 +3,7 @@ import UIKit
 open class TableRowSwitch: TableRow<TableSwitchCell> { }
 
 // MARK: - ViewModel
-open class TableSwitchCellVM: CellVM {
+open class TableSwitchCellVM: CellVM, Equatable {
     public typealias ChangeActionType = (TableSwitchCellVM) -> Void
     // MARK: Variables
     public var title: String = "" {
@@ -31,7 +31,7 @@ open class TableSwitchCellVM: CellVM {
         return 44
     }
     
-    static func == (lhs: TableSwitchCellVM, rhs: TableSwitchCellVM) -> Bool {
+    public static func == (lhs: TableSwitchCellVM, rhs: TableSwitchCellVM) -> Bool {
         guard lhs.title == rhs.title else { return false }
         return true
     }
@@ -54,10 +54,17 @@ open class TableSwitchCell: UITableViewCell, ConfigurableCell {
     let vwSwitch: UISwitch = UISwitch()
     
     // MARK: Init
+    #if swift(>=4.2)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        configure()
+    }
+    #else
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configure()
     }
+    #endif
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
