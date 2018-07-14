@@ -16,5 +16,5 @@ xcode_scheme: RKTableAdapter
 # - pod install
 
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace RKTableAdapter.xcworkspace -scheme RKTableAdapterTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.3' | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -project RKTableAdapter.xcodeproj -scheme RKTableAdapterTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.3' | xcpretty
 - pod lib lint
