@@ -4,7 +4,7 @@
 [![Cocoapods compatible](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat)](https://cocoapods.org/)
 [![Version](https://img.shields.io/cocoapods/v/RKTableAdapter.svg?style=flat)](https://cocoapods.org/pods/RKTableAdapter)
 [![Platform](https://img.shields.io/cocoapods/p/RKTableAdapter.svg?style=flat)](https://cocoapods.org/pods/RKTableAdapter)
-[![Swift Version](https://img.shields.io/badge/Swift-4.1-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
+[![Swift Version](https://img.shields.io/badge/Swift-4.0–4.2-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 [![License](https://img.shields.io/cocoapods/l/RKTableAdapter.svg?style=flat)](https://cocoapods.org/pods/RKTableAdapter)
 
 ## Documentations
