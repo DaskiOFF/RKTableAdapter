@@ -112,7 +112,7 @@ class BatchUpdater {
         for newListIndex in 0..<list.count {
             if filteredUpdates.contains(newListIndex) {
                 filteredUpdates.remove(newListIndex)
-                guard let oldListIndex = oldList.firstIndex(where: { $0.deepDiffHash == list[newListIndex].deepDiffHash }) else {
+                guard let oldListIndex = oldList.index(where: { $0.deepDiffHash == list[newListIndex].deepDiffHash }) else {
                     continue
                 }
                 sectionsChanges.deletes.insert(oldListIndex)
