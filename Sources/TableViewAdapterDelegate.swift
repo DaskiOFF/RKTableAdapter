@@ -9,6 +9,16 @@
 import UIKit
 
 class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
+    // MARK: - Types
+    #if swift(>=4.2)
+    public let TableViewAutomaticDimension = UITableView.automaticDimension
+    public typealias TableViewCellEditingStyle = UITableViewCell.EditingStyle
+    #else
+    public let TableViewAutomaticDimension = UITableViewAutomaticDimension
+    public typealias TableViewCellEditingStyle = UITableViewCellEditingStyle
+    #endif
+
+    // MARK: - Properties
     unowned var holder: TableViewAdapter
     var automaticHeaderFooterHeight: CGFloat = 0
 
@@ -16,7 +26,7 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
     init(holder: TableViewAdapter) {
         self.holder = holder
         if holder.tableView.style == .grouped {
-            self.automaticHeaderFooterHeight = UITableViewAutomaticDimension
+            self.automaticHeaderFooterHeight = TableViewAutomaticDimension
         }
     }
 
@@ -36,7 +46,7 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
         let row = holder.list.sections[indexPath.section].rows[indexPath.row]
         return row.defaultHeight ??
             row.estimatedHeight ??
-        UITableViewAutomaticDimension
+        TableViewAutomaticDimension
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -93,14 +103,14 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
         return holder.callbacks.canEditRow?(tableView, indexPath, (section, row)) ?? false
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: TableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         guard let section = section(for: indexPath.section),
             let row = row(for: section, index: indexPath.row)
             else { return }
         holder.callbacks.commitEditRow?(tableView, indexPath, editingStyle, (section, row))
     }
 
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> TableViewCellEditingStyle {
         guard let section = section(for: indexPath.section),
             let row = row(for: section, index: indexPath.row)
             else { return .none }

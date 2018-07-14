@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RKTableAdapter: 32dde1c9f9e06f7a0de0ee5901a8e8a7d75dbcf6
+  RKTableAdapter: 3300cfee1e93c719123e68f5aa80e55a9db932be
 
 PODFILE CHECKSUM: 053520554ca25f6d1408fc0ee8a805717f15b0e5
 

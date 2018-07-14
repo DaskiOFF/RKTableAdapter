@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21C956F151CC5E59DCEC29FC /* Pods_RKTableAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAE15F7C2E98799ECE62BCD /* Pods_RKTableAdapter.framework */; };
-		5C13D80885E76B478B210A5E /* Pods_RKTableAdapterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1C9BB09AF6DF2C13C03179 /* Pods_RKTableAdapterTests.framework */; };
 		BB27990720FA8F9000056FD8 /* TestBatchUpdateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990620FA8F9000056FD8 /* TestBatchUpdateTests.swift */; };
 		BB27992320FA8F9B00056FD8 /* BatchUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990B20FA8F9A00056FD8 /* BatchUpdater.swift */; };
 		BB27992420FA8F9B00056FD8 /* SectionsChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990D20FA8F9A00056FD8 /* SectionsChanges.swift */; };
 		BB27992520FA8F9B00056FD8 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990E20FA8F9A00056FD8 /* Box.swift */; };
 		BB27992620FA8F9B00056FD8 /* SectionChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990F20FA8F9A00056FD8 /* SectionChanges.swift */; };
-		BB27992720FA8F9B00056FD8 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991120FA8F9A00056FD8 /* UICollectionView.swift */; };
-		BB27992820FA8F9B00056FD8 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991220FA8F9A00056FD8 /* UITableView.swift */; };
+		BB27992720FA8F9B00056FD8 /* UICollectionView+BatchUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991120FA8F9A00056FD8 /* UICollectionView+BatchUpdater.swift */; };
+		BB27992820FA8F9B00056FD8 /* UITableView+BatchUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991220FA8F9A00056FD8 /* UITableView+BatchUpdater.swift */; };
 		BB27992920FA8F9B00056FD8 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991520FA8F9A00056FD8 /* Array+Extensions.swift */; };
 		BB27992A20FA8F9B00056FD8 /* DeepHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991620FA8F9A00056FD8 /* DeepHashable.swift */; };
 		BB27992B20FA8F9B00056FD8 /* DeepDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991720FA8F9A00056FD8 /* DeepDiff.swift */; };
@@ -65,8 +63,8 @@
 		BB27990D20FA8F9A00056FD8 /* SectionsChanges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsChanges.swift; sourceTree = "<group>"; };
 		BB27990E20FA8F9A00056FD8 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		BB27990F20FA8F9A00056FD8 /* SectionChanges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionChanges.swift; sourceTree = "<group>"; };
-		BB27991120FA8F9A00056FD8 /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
-		BB27991220FA8F9A00056FD8 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		BB27991120FA8F9A00056FD8 /* UICollectionView+BatchUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+BatchUpdater.swift"; sourceTree = "<group>"; };
+		BB27991220FA8F9A00056FD8 /* UITableView+BatchUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+BatchUpdater.swift"; sourceTree = "<group>"; };
 		BB27991520FA8F9A00056FD8 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		BB27991620FA8F9A00056FD8 /* DeepHashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepHashable.swift; sourceTree = "<group>"; };
 		BB27991720FA8F9A00056FD8 /* DeepDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepDiff.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21C956F151CC5E59DCEC29FC /* Pods_RKTableAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +109,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6884B420CDD6EA00B507BB /* RKTableAdapter.framework in Frameworks */,
-				5C13D80885E76B478B210A5E /* Pods_RKTableAdapterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,8 +156,8 @@
 		BB27991020FA8F9A00056FD8 /* UIExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				BB27991120FA8F9A00056FD8 /* UICollectionView.swift */,
-				BB27991220FA8F9A00056FD8 /* UITableView.swift */,
+				BB27991120FA8F9A00056FD8 /* UICollectionView+BatchUpdater.swift */,
+				BB27991220FA8F9A00056FD8 /* UITableView+BatchUpdater.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -345,7 +341,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB6884BE20CDD6EA00B507BB /* Build configuration list for PBXNativeTarget "RKTableAdapter" */;
 			buildPhases = (
-				E3A7E8ED18376A4C0A213856 /* [CP] Check Pods Manifest.lock */,
 				BB6884A520CDD6EA00B507BB /* Sources */,
 				BB6884A620CDD6EA00B507BB /* Frameworks */,
 				BB6884A720CDD6EA00B507BB /* Headers */,
@@ -364,11 +359,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB6884C120CDD6EA00B507BB /* Build configuration list for PBXNativeTarget "RKTableAdapterTests" */;
 			buildPhases = (
-				D0D436AA940E98E53BD81A1B /* [CP] Check Pods Manifest.lock */,
 				BB6884AF20CDD6EA00B507BB /* Sources */,
 				BB6884B020CDD6EA00B507BB /* Frameworks */,
 				BB6884B120CDD6EA00B507BB /* Resources */,
-				16427BC1B233B21A22522113 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -433,63 +426,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		16427BC1B233B21A22522113 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RKTableAdapterTests/Pods-RKTableAdapterTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DeepDiff/DeepDiff.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeepDiff.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RKTableAdapterTests/Pods-RKTableAdapterTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D0D436AA940E98E53BD81A1B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RKTableAdapterTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E3A7E8ED18376A4C0A213856 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RKTableAdapter-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		BB6884A520CDD6EA00B507BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -508,11 +444,11 @@
 				BB6884D820CDD74A00B507BB /* TableRow.swift in Sources */,
 				BB27992F20FA8F9B00056FD8 /* MoveReducer.swift in Sources */,
 				BB6884D720CDD74A00B507BB /* TableList.swift in Sources */,
-				BB27992820FA8F9B00056FD8 /* UITableView.swift in Sources */,
+				BB27992820FA8F9B00056FD8 /* UITableView+BatchUpdater.swift in Sources */,
 				BB27993020FA8F9B00056FD8 /* Change.swift in Sources */,
 				BB27992920FA8F9B00056FD8 /* Array+Extensions.swift in Sources */,
 				BB27992420FA8F9B00056FD8 /* SectionsChanges.swift in Sources */,
-				BB27992720FA8F9B00056FD8 /* UICollectionView.swift in Sources */,
+				BB27992720FA8F9B00056FD8 /* UICollectionView+BatchUpdater.swift in Sources */,
 				BB27992620FA8F9B00056FD8 /* SectionChanges.swift in Sources */,
 				BB27993220FA8F9B00056FD8 /* UITableView+Extensions.swift in Sources */,
 				BB27992E20FA8F9B00056FD8 /* Heckel.swift in Sources */,
@@ -668,7 +604,6 @@
 		};
 		BB6884BF20CDD6EA00B507BB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACE86E722023D6081941E424 /* Pods-RKTableAdapter.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -687,14 +622,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.waydeveloper.RKTableAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		BB6884C020CDD6EA00B507BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8D0D66D03ACA336BAE61E10 /* Pods-RKTableAdapter.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -713,14 +647,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.waydeveloper.RKTableAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		BB6884C220CDD6EA00B507BB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E02650EC89A15BDAADBE4F8 /* Pods-RKTableAdapterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -732,14 +665,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.waydeveloper.RKTableAdapterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		BB6884C320CDD6EA00B507BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20DFE68BDAECADB92458A50C /* Pods-RKTableAdapterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -751,7 +683,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.waydeveloper.RKTableAdapterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

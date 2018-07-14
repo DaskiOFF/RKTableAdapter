@@ -11,6 +11,12 @@ public protocol RowHeightComputable: class {
 open class CellVM: RowHeightComputable {
     // MARK: Types
     public typealias UserInfoType = Any
+    #if swift(>=4.2)
+    public typealias TableViewCellAccessoryType = UITableViewCell.AccessoryType
+    #else
+    public typealias TableViewCellAccessoryType = UITableViewCellAccessoryType
+    #endif
+
     /// Тип замыкания действия при нажатии на ячейку
     public typealias ActionType = (UserInfoType?) -> Void
     
@@ -19,7 +25,7 @@ open class CellVM: RowHeightComputable {
     public var deselectAutomatically: Bool = true
     /// Выделяемая ячейка или нет
     public var isSelectable: Bool = true
-    public var accessoryType: UITableViewCellAccessoryType = .none
+    public var accessoryType: TableViewCellAccessoryType = .none
 
     // MARK: DidSelectAction and data
     /// Действие, которое вызывается при нажатии на ячейку
