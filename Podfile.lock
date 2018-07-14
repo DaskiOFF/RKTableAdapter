@@ -2,15 +2,21 @@ PODS:
   - DeepDiff (1.2.0)
 
 DEPENDENCIES:
-  - DeepDiff
+  - DeepDiff (from `https://github.com/DaskiOFF/DeepDiff.git`, branch `develop`)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - DeepDiff
+EXTERNAL SOURCES:
+  DeepDiff:
+    :branch: develop
+    :git: https://github.com/DaskiOFF/DeepDiff.git
+
+CHECKOUT OPTIONS:
+  DeepDiff:
+    :commit: 662e2cf7c4b80586a8e940139756584181fe83a2
+    :git: https://github.com/DaskiOFF/DeepDiff.git
 
 SPEC CHECKSUMS:
   DeepDiff: 0ee83ac6942d441f677c22e981548c6e0937f2b6
 
-PODFILE CHECKSUM: bb8aa026361ac05434f8aab996da9826d729bc98
+PODFILE CHECKSUM: 63a01f2e27c5dc44f6f66480e30b1766837426cf
 
 COCOAPODS: 1.5.3

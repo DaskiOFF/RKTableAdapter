@@ -1,10 +1,10 @@
 import Foundation
 
-open class TableSection: Hashable  {
+open class TableSection: BatchUpdateSection, Hashable  {
     // MARK: - Properties
     /// Идентификатор
     public let id: String
-    private(set) var rows: [RowConfigurable] = []
+    public private(set) var rows: [RowConfigurable] = []
     
     // MARK: Header / Footer
     /// Заголовок хедера секции (Внимание! Возможно установить или headerString, или headerView)
@@ -24,7 +24,7 @@ open class TableSection: Hashable  {
     /// CustomView для футера секции (Внимание! Возможно установить или footerString, или footerView)
     /// Приоритет имеет footerView
     public var footerView: UIView?
-    
+
     // MARK: - Init
     public init(with id: String) {
         self.id = id
@@ -78,6 +78,7 @@ open class TableSection: Hashable  {
     ///
     /// - Parameter index: Индекс удаляемой строки
     /// - Returns: Удаленная строка
+    @discardableResult
     public func remove(rowAt index: Int) -> RowConfigurable {
         return rows.remove(at: index)
     }
@@ -116,6 +117,18 @@ open class TableSection: Hashable  {
     }
 
     public static func == (lhs: TableSection, rhs: TableSection) -> Bool {
-        return lhs.id == rhs.id
+        guard lhs.id == rhs.id else { return false }
+        guard lhs.headerString == rhs.headerString else { return false }
+        guard lhs.headerHeight == rhs.headerHeight else { return false }
+        guard lhs.headerView == rhs.headerView else { return false }
+        guard lhs.footerString == rhs.footerString else { return false }
+        guard lhs.footerHeight == rhs.footerHeight else { return false }
+        guard lhs.footerView == rhs.footerView else { return false }
+        return true
+    }
+
+    // MARK: - BatchUpdateSection
+    func getRows() -> [DeepHashable] {
+        return rows
     }
 }

@@ -8,7 +8,7 @@ public protocol RowHeightComputable: class {
 }
 
 /// Родительский класс для любой ViewModel ячейки
-open class CellVM: RowHeightComputable, Equatable {
+open class CellVM: RowHeightComputable {
     // MARK: Types
     public typealias UserInfoType = Any
     /// Тип замыкания действия при нажатии на ячейку
@@ -53,29 +53,47 @@ open class CellVM: RowHeightComputable, Equatable {
         }
         self.view = nil
     }
-    
-    // MARK: Equatable
-    /// :nodoc:
-    public static func == (lhs: CellVM, rhs: CellVM) -> Bool {
-        preconditionFailure("This method must be overridden")
-    }
 }
 
 /// :nodoc:
-public protocol RowConfigurable: RowHeightComputable {
+open class RowConfigurable: RowHeightComputable, DeepHashable {
     // MARK: Properties
     /// Идентификатор строки
-    var id: String { get }
+    public internal(set) var id: String = ""
     /// Идентификатор для повторного использования ячейки
-    var reuseId: String { get }
+    var reuseId: String {
+        preconditionFailure("This method must be overridden")
+    }
     /// Тип ячейки
-    var cellType: AnyClass { get }
+    var cellType: AnyClass {
+        preconditionFailure("This method must be overridden")
+    }
     /// Модель данных ячейки
-    var cellVM: CellVM { get }
+    var cellVM: CellVM {
+        preconditionFailure("This method must be overridden")
+    }
+
+    public var estimatedHeight: CGFloat? {
+        preconditionFailure("This method must be overridden")
+    }
+    public var defaultHeight: CGFloat? {
+        preconditionFailure("This method must be overridden")
+    }
     
     // MARK: Configure
     /// Метод конфигурации ячейки с помощью viewModel
     ///
     /// - Parameter cell: Ячейка, которую необходимо сконфигурировать
-    func configure(_ cell: UITableViewCell)
+    func configure(_ cell: UITableViewCell) {
+        preconditionFailure("This method must be overridden")
+    }
+
+    // MARK: DeepHashable
+    public var deepDiffHash: Int {
+        return self.id.hashValue
+    }
+
+    public func equal(object: Any?) -> Bool {
+        preconditionFailure("This method must be overridden")
+    }
 }

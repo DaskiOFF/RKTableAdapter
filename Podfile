@@ -6,7 +6,6 @@ target 'RKTableAdapter' do
   use_frameworks!
 
   # Pods for RKTableAdapter
-  pod 'DeepDiff', '1.2.0'
 
   target 'RKTableAdapterTests' do
     inherit! :search_paths

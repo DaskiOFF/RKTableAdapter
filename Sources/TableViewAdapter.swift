@@ -1,6 +1,5 @@
 import Foundation
 import UIKit
-import DeepDiff
 
 /// Для работы с TableViewAdapter
 /// - Ячейка должна реализовывать протокол ConfigurableCell
@@ -69,6 +68,8 @@ open class TableViewAdapter {
 
     private var tableViewDelegate: TableViewAdapterDelegate!
 
+    private let batchUpdater = BatchUpdater()
+
     // MARK: - Callbacks
     /// Обработка методов таблицы
     public let callbacks: TableAdapterCallbacks = TableAdapterCallbacks()
@@ -108,26 +109,14 @@ open class TableViewAdapter {
         }
         registerCells()
 
-        if oldList.sections.isEmpty || self._list.sections.isEmpty {
+        if oldList.sections.isEmpty || _list.sections.isEmpty {
             tableView.reloadData()
             return
         }
 
-//        let diffSectionsResult = diff(old: oldList.sections, new: list.sections)
-//        for changeValue in diffSectionsResult {
-//            switch changeValue {
-//            case .delete(let del):
-//                ()
-//                
-//            case .insert(let ins):
-//                ()
-//            case .move(let move):
-//                ()
-//            case .replace(let repl):
-//                ()
-//            }
-//        }
-
-        tableView.reloadData()
+        batchUpdater.batchUpdate(tableView: tableView,
+                                 oldSections: oldList.sections,
+                                 newSections: list.sections,
+                                 completion: nil)
     }
 }
