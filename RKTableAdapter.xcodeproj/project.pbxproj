@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB27990720FA8F9000056FD8 /* TestBatchUpdateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990620FA8F9000056FD8 /* TestBatchUpdateTests.swift */; };
+		BB27992320FA8F9B00056FD8 /* BatchUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990B20FA8F9A00056FD8 /* BatchUpdater.swift */; };
+		BB27992420FA8F9B00056FD8 /* SectionsChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990D20FA8F9A00056FD8 /* SectionsChanges.swift */; };
+		BB27992520FA8F9B00056FD8 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990E20FA8F9A00056FD8 /* Box.swift */; };
+		BB27992620FA8F9B00056FD8 /* SectionChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990F20FA8F9A00056FD8 /* SectionChanges.swift */; };
+		BB27992720FA8F9B00056FD8 /* UICollectionView+BatchUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991120FA8F9A00056FD8 /* UICollectionView+BatchUpdater.swift */; };
+		BB27992820FA8F9B00056FD8 /* UITableView+BatchUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991220FA8F9A00056FD8 /* UITableView+BatchUpdater.swift */; };
+		BB27992920FA8F9B00056FD8 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991520FA8F9A00056FD8 /* Array+Extensions.swift */; };
+		BB27992A20FA8F9B00056FD8 /* DeepHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991620FA8F9A00056FD8 /* DeepHashable.swift */; };
+		BB27992B20FA8F9B00056FD8 /* DeepDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991720FA8F9A00056FD8 /* DeepDiff.swift */; };
+		BB27992C20FA8F9B00056FD8 /* WagnerFischer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991920FA8F9A00056FD8 /* WagnerFischer.swift */; };
+		BB27992D20FA8F9B00056FD8 /* DiffAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991A20FA8F9A00056FD8 /* DiffAware.swift */; };
+		BB27992E20FA8F9B00056FD8 /* Heckel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991B20FA8F9A00056FD8 /* Heckel.swift */; };
+		BB27992F20FA8F9B00056FD8 /* MoveReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991C20FA8F9A00056FD8 /* MoveReducer.swift */; };
+		BB27993020FA8F9B00056FD8 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991D20FA8F9A00056FD8 /* Change.swift */; };
+		BB27993120FA8F9B00056FD8 /* IndexPathConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991F20FA8F9A00056FD8 /* IndexPathConverter.swift */; };
+		BB27993220FA8F9B00056FD8 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27992020FA8F9A00056FD8 /* UITableView+Extensions.swift */; };
+		BB27993320FA8F9B00056FD8 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27992120FA8F9A00056FD8 /* UICollectionView+Extensions.swift */; };
+		BB27993420FA926200056FD8 /* DataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990920FA8F9A00056FD8 /* DataGenerator.swift */; };
 		BB6884B420CDD6EA00B507BB /* RKTableAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6884AA20CDD6EA00B507BB /* RKTableAdapter.framework */; };
 		BB6884B920CDD6EA00B507BB /* RKTableAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884B820CDD6EA00B507BB /* RKTableAdapterTests.swift */; };
 		BB6884BB20CDD6EA00B507BB /* RKTableAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB6884AD20CDD6EA00B507BB /* RKTableAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,7 +38,7 @@
 		BB6884DA20CDD74A00B507BB /* TableRowSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884CE20CDD74A00B507BB /* TableRowSwitch.swift */; };
 		BB6884DB20CDD74A00B507BB /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884D020CDD74A00B507BB /* ConfigurableCell.swift */; };
 		BB6884DC20CDD74A00B507BB /* RowConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884D120CDD74A00B507BB /* RowConfigurable.swift */; };
-		BB6884DD20CDD74A00B507BB /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884D320CDD74A00B507BB /* UITableView.swift */; };
+		BBBC38D620F3E212001B8ED4 /* TableViewAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +52,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20DFE68BDAECADB92458A50C /* Pods-RKTableAdapterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKTableAdapterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RKTableAdapterTests/Pods-RKTableAdapterTests.release.xcconfig"; sourceTree = "<group>"; };
+		2EAE15F7C2E98799ECE62BCD /* Pods_RKTableAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKTableAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E1C9BB09AF6DF2C13C03179 /* Pods_RKTableAdapterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RKTableAdapterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E02650EC89A15BDAADBE4F8 /* Pods-RKTableAdapterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKTableAdapterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RKTableAdapterTests/Pods-RKTableAdapterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACE86E722023D6081941E424 /* Pods-RKTableAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKTableAdapter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RKTableAdapter/Pods-RKTableAdapter.debug.xcconfig"; sourceTree = "<group>"; };
+		BB27990620FA8F9000056FD8 /* TestBatchUpdateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBatchUpdateTests.swift; sourceTree = "<group>"; };
+		BB27990920FA8F9A00056FD8 /* DataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGenerator.swift; sourceTree = "<group>"; };
+		BB27990B20FA8F9A00056FD8 /* BatchUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchUpdater.swift; sourceTree = "<group>"; };
+		BB27990D20FA8F9A00056FD8 /* SectionsChanges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsChanges.swift; sourceTree = "<group>"; };
+		BB27990E20FA8F9A00056FD8 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		BB27990F20FA8F9A00056FD8 /* SectionChanges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionChanges.swift; sourceTree = "<group>"; };
+		BB27991120FA8F9A00056FD8 /* UICollectionView+BatchUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+BatchUpdater.swift"; sourceTree = "<group>"; };
+		BB27991220FA8F9A00056FD8 /* UITableView+BatchUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+BatchUpdater.swift"; sourceTree = "<group>"; };
+		BB27991520FA8F9A00056FD8 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		BB27991620FA8F9A00056FD8 /* DeepHashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepHashable.swift; sourceTree = "<group>"; };
+		BB27991720FA8F9A00056FD8 /* DeepDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepDiff.swift; sourceTree = "<group>"; };
+		BB27991920FA8F9A00056FD8 /* WagnerFischer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WagnerFischer.swift; sourceTree = "<group>"; };
+		BB27991A20FA8F9A00056FD8 /* DiffAware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffAware.swift; sourceTree = "<group>"; };
+		BB27991B20FA8F9A00056FD8 /* Heckel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heckel.swift; sourceTree = "<group>"; };
+		BB27991C20FA8F9A00056FD8 /* MoveReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveReducer.swift; sourceTree = "<group>"; };
+		BB27991D20FA8F9A00056FD8 /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
+		BB27991F20FA8F9A00056FD8 /* IndexPathConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexPathConverter.swift; sourceTree = "<group>"; };
+		BB27992020FA8F9A00056FD8 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		BB27992120FA8F9A00056FD8 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		BB6884AA20CDD6EA00B507BB /* RKTableAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RKTableAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6884AD20CDD6EA00B507BB /* RKTableAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKTableAdapter.h; sourceTree = "<group>"; };
 		BB6884AE20CDD6EA00B507BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +92,8 @@
 		BB6884D020CDD74A00B507BB /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		BB6884D120CDD74A00B507BB /* RowConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowConfigurable.swift; sourceTree = "<group>"; };
 		BB6884D320CDD74A00B507BB /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterDelegate.swift; sourceTree = "<group>"; };
+		C8D0D66D03ACA336BAE61E10 /* Pods-RKTableAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKTableAdapter.release.xcconfig"; path = "Pods/Target Support Files/Pods-RKTableAdapter/Pods-RKTableAdapter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +115,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB27990520FA8F9000056FD8 /* BatchUpdater */ = {
+			isa = PBXGroup;
+			children = (
+				BB27990920FA8F9A00056FD8 /* DataGenerator.swift */,
+				BB27990620FA8F9000056FD8 /* TestBatchUpdateTests.swift */,
+			);
+			path = BatchUpdater;
+			sourceTree = "<group>";
+		};
+		BB27990820FA8F9A00056FD8 /* BatchUpdater */ = {
+			isa = PBXGroup;
+			children = (
+				BB27990A20FA8F9A00056FD8 /* BatchUpdater */,
+				BB27991320FA8F9A00056FD8 /* DeepDiff */,
+			);
+			path = BatchUpdater;
+			sourceTree = "<group>";
+		};
+		BB27990A20FA8F9A00056FD8 /* BatchUpdater */ = {
+			isa = PBXGroup;
+			children = (
+				BB27990B20FA8F9A00056FD8 /* BatchUpdater.swift */,
+				BB27990C20FA8F9A00056FD8 /* Models */,
+				BB27991020FA8F9A00056FD8 /* UIExtensions */,
+			);
+			path = BatchUpdater;
+			sourceTree = "<group>";
+		};
+		BB27990C20FA8F9A00056FD8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB27990D20FA8F9A00056FD8 /* SectionsChanges.swift */,
+				BB27990E20FA8F9A00056FD8 /* Box.swift */,
+				BB27990F20FA8F9A00056FD8 /* SectionChanges.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BB27991020FA8F9A00056FD8 /* UIExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB27991120FA8F9A00056FD8 /* UICollectionView+BatchUpdater.swift */,
+				BB27991220FA8F9A00056FD8 /* UITableView+BatchUpdater.swift */,
+			);
+			path = UIExtensions;
+			sourceTree = "<group>";
+		};
+		BB27991320FA8F9A00056FD8 /* DeepDiff */ = {
+			isa = PBXGroup;
+			children = (
+				BB27991420FA8F9A00056FD8 /* Shared */,
+				BB27991E20FA8F9A00056FD8 /* iOS */,
+			);
+			path = DeepDiff;
+			sourceTree = "<group>";
+		};
+		BB27991420FA8F9A00056FD8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BB27991520FA8F9A00056FD8 /* Array+Extensions.swift */,
+				BB27991620FA8F9A00056FD8 /* DeepHashable.swift */,
+				BB27991720FA8F9A00056FD8 /* DeepDiff.swift */,
+				BB27991820FA8F9A00056FD8 /* Algorithms */,
+				BB27991C20FA8F9A00056FD8 /* MoveReducer.swift */,
+				BB27991D20FA8F9A00056FD8 /* Change.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		BB27991820FA8F9A00056FD8 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				BB27991920FA8F9A00056FD8 /* WagnerFischer.swift */,
+				BB27991A20FA8F9A00056FD8 /* DiffAware.swift */,
+				BB27991B20FA8F9A00056FD8 /* Heckel.swift */,
+			);
+			path = Algorithms;
+			sourceTree = "<group>";
+		};
+		BB27991E20FA8F9A00056FD8 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BB27991F20FA8F9A00056FD8 /* IndexPathConverter.swift */,
+				BB27992020FA8F9A00056FD8 /* UITableView+Extensions.swift */,
+				BB27992120FA8F9A00056FD8 /* UICollectionView+Extensions.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		BB6884A020CDD6EA00B507BB = {
 			isa = PBXGroup;
 			children = (
 				BB6884AC20CDD6EA00B507BB /* RKTableAdapter */,
 				BB6884B720CDD6EA00B507BB /* RKTableAdapterTests */,
 				BB6884AB20CDD6EA00B507BB /* Products */,
+				C70C49DF62816E991031879F /* Pods */,
+				FF6C499D26DE6449649576F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +237,7 @@
 		BB6884B720CDD6EA00B507BB /* RKTableAdapterTests */ = {
 			isa = PBXGroup;
 			children = (
+				BB27990520FA8F9000056FD8 /* BatchUpdater */,
 				BB6884B820CDD6EA00B507BB /* RKTableAdapterTests.swift */,
 				BB6884BA20CDD6EA00B507BB /* Info.plist */,
 			);
@@ -111,9 +248,11 @@
 			isa = PBXGroup;
 			children = (
 				BB6884C520CDD74A00B507BB /* TableViewAdapter.swift */,
+				BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */,
 				BB6884C620CDD74A00B507BB /* Callbacks */,
 				BB6884C920CDD74A00B507BB /* Models */,
 				BB6884D220CDD74A00B507BB /* Extensions */,
+				BB27990820FA8F9A00056FD8 /* BatchUpdater */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -162,6 +301,26 @@
 				BB6884D320CDD74A00B507BB /* UITableView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C70C49DF62816E991031879F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACE86E722023D6081941E424 /* Pods-RKTableAdapter.debug.xcconfig */,
+				C8D0D66D03ACA336BAE61E10 /* Pods-RKTableAdapter.release.xcconfig */,
+				7E02650EC89A15BDAADBE4F8 /* Pods-RKTableAdapterTests.debug.xcconfig */,
+				20DFE68BDAECADB92458A50C /* Pods-RKTableAdapterTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF6C499D26DE6449649576F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EAE15F7C2E98799ECE62BCD /* Pods_RKTableAdapter.framework */,
+				4E1C9BB09AF6DF2C13C03179 /* Pods_RKTableAdapterTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,14 +432,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6884DC20CDD74A00B507BB /* RowConfigurable.swift in Sources */,
+				BB27993320FA8F9B00056FD8 /* UICollectionView+Extensions.swift in Sources */,
 				BB6884D620CDD74A00B507BB /* TableAdapterScrollViewCallbacks.swift in Sources */,
 				BB6884D420CDD74A00B507BB /* TableViewAdapter.swift in Sources */,
+				BB27992320FA8F9B00056FD8 /* BatchUpdater.swift in Sources */,
 				BB6884DB20CDD74A00B507BB /* ConfigurableCell.swift in Sources */,
+				BB27992C20FA8F9B00056FD8 /* WagnerFischer.swift in Sources */,
+				BB27992B20FA8F9B00056FD8 /* DeepDiff.swift in Sources */,
 				BB6884D920CDD74A00B507BB /* TableSection.swift in Sources */,
+				BBBC38D620F3E212001B8ED4 /* TableViewAdapterDelegate.swift in Sources */,
 				BB6884D820CDD74A00B507BB /* TableRow.swift in Sources */,
+				BB27992F20FA8F9B00056FD8 /* MoveReducer.swift in Sources */,
 				BB6884D720CDD74A00B507BB /* TableList.swift in Sources */,
-				BB6884DD20CDD74A00B507BB /* UITableView.swift in Sources */,
+				BB27992820FA8F9B00056FD8 /* UITableView+BatchUpdater.swift in Sources */,
+				BB27993020FA8F9B00056FD8 /* Change.swift in Sources */,
+				BB27992920FA8F9B00056FD8 /* Array+Extensions.swift in Sources */,
+				BB27992420FA8F9B00056FD8 /* SectionsChanges.swift in Sources */,
+				BB27992720FA8F9B00056FD8 /* UICollectionView+BatchUpdater.swift in Sources */,
+				BB27992620FA8F9B00056FD8 /* SectionChanges.swift in Sources */,
+				BB27993220FA8F9B00056FD8 /* UITableView+Extensions.swift in Sources */,
+				BB27992E20FA8F9B00056FD8 /* Heckel.swift in Sources */,
+				BB27992A20FA8F9B00056FD8 /* DeepHashable.swift in Sources */,
+				BB27992D20FA8F9B00056FD8 /* DiffAware.swift in Sources */,
 				BB6884D520CDD74A00B507BB /* TableAdapterCallbacks.swift in Sources */,
+				BB27993120FA8F9B00056FD8 /* IndexPathConverter.swift in Sources */,
+				BB27992520FA8F9B00056FD8 /* Box.swift in Sources */,
 				BB6884DA20CDD74A00B507BB /* TableRowSwitch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +465,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB27993420FA926200056FD8 /* DataGenerator.swift in Sources */,
 				BB6884B920CDD6EA00B507BB /* RKTableAdapterTests.swift in Sources */,
+				BB27990720FA8F9000056FD8 /* TestBatchUpdateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +613,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RKTableAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,7 +622,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.waydeveloper.RKTableAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -459,6 +638,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RKTableAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +647,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.waydeveloper.RKTableAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -485,7 +665,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.waydeveloper.RKTableAdapterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -503,7 +683,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.waydeveloper.RKTableAdapterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

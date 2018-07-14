@@ -7,11 +7,14 @@ osx_image: "xcode9.3"
 language: swift
 xcode_project: RKTableAdapter.xcodeproj # path to your xcodeproj folder
 xcode_scheme: RKTableAdapter
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
+
+cache: cocoapods
+podfile: Podfile
+before_install:
+- gem install cocoapods # Since Travis is not always on latest version
+- pod update
+- pod install
+
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -project RKTableAdapter.xcodeproj -scheme RKTableAdapterTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.3' | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace RKTableAdapter.xcworkspace -scheme RKTableAdapterTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.3' | xcpretty
 - pod lib lint

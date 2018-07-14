@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RKTableAdapter'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Table Adapter'
 
 # This description is used to generate tags and improve search results.
@@ -19,6 +19,9 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
   Table Adapter
+
+  0.1.1
+    Add support DeepDiff and batch update
 
   0.1.0
     Init
@@ -41,5 +44,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # s.dependency 'DeepDiff'
 end

@@ -1,0 +1,16 @@
+PODS:
+  - RKTableAdapter (0.1.1)
+
+DEPENDENCIES:
+  - RKTableAdapter (from `../`)
+
+EXTERNAL SOURCES:
+  RKTableAdapter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RKTableAdapter: 3300cfee1e93c719123e68f5aa80e55a9db932be
+
+PODFILE CHECKSUM: 053520554ca25f6d1408fc0ee8a805717f15b0e5
+
+COCOAPODS: 1.5.3
