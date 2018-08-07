@@ -38,6 +38,8 @@
 		BB6884DA20CDD74A00B507BB /* TableRowSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884CE20CDD74A00B507BB /* TableRowSwitch.swift */; };
 		BB6884DB20CDD74A00B507BB /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884D020CDD74A00B507BB /* ConfigurableCell.swift */; };
 		BB6884DC20CDD74A00B507BB /* RowConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884D120CDD74A00B507BB /* RowConfigurable.swift */; };
+		BBAA8C2F211A25B800DB621F /* CellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA8C2E211A25B800DB621F /* CellLayout.swift */; };
+		BBAA8C31211A25DA00DB621F /* CellCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA8C30211A25DA00DB621F /* CellCalculator.swift */; };
 		BBBC38D620F3E212001B8ED4 /* TableViewAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		BB6884D020CDD74A00B507BB /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		BB6884D120CDD74A00B507BB /* RowConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowConfigurable.swift; sourceTree = "<group>"; };
 		BB6884D320CDD74A00B507BB /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		BBAA8C2E211A25B800DB621F /* CellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLayout.swift; sourceTree = "<group>"; };
+		BBAA8C30211A25DA00DB621F /* CellCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCalculator.swift; sourceTree = "<group>"; };
 		BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterDelegate.swift; sourceTree = "<group>"; };
 		C8D0D66D03ACA336BAE61E10 /* Pods-RKTableAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKTableAdapter.release.xcconfig"; path = "Pods/Target Support Files/Pods-RKTableAdapter/Pods-RKTableAdapter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -291,6 +295,8 @@
 			children = (
 				BB6884D020CDD74A00B507BB /* ConfigurableCell.swift */,
 				BB6884D120CDD74A00B507BB /* RowConfigurable.swift */,
+				BBAA8C2E211A25B800DB621F /* CellLayout.swift */,
+				BBAA8C30211A25DA00DB621F /* CellCalculator.swift */,
 			);
 			path = Additionals;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				BB27992F20FA8F9B00056FD8 /* MoveReducer.swift in Sources */,
 				BB6884D720CDD74A00B507BB /* TableList.swift in Sources */,
 				BB27992820FA8F9B00056FD8 /* UITableView+BatchUpdater.swift in Sources */,
+				BBAA8C31211A25DA00DB621F /* CellCalculator.swift in Sources */,
 				BB27993020FA8F9B00056FD8 /* Change.swift in Sources */,
 				BB27992920FA8F9B00056FD8 /* Array+Extensions.swift in Sources */,
 				BB27992420FA8F9B00056FD8 /* SectionsChanges.swift in Sources */,
@@ -456,6 +463,7 @@
 				BB27992D20FA8F9B00056FD8 /* DiffAware.swift in Sources */,
 				BB6884D520CDD74A00B507BB /* TableAdapterCallbacks.swift in Sources */,
 				BB27993120FA8F9B00056FD8 /* IndexPathConverter.swift in Sources */,
+				BBAA8C2F211A25B800DB621F /* CellLayout.swift in Sources */,
 				BB27992520FA8F9B00056FD8 /* Box.swift in Sources */,
 				BB6884DA20CDD74A00B507BB /* TableRowSwitch.swift in Sources */,
 			);
