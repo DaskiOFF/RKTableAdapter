@@ -1,8 +1,8 @@
 import UIKit
 
 open class CellLayout {
-    var height: CGFloat = 0
-    var width: CGFloat = 0
+    public var height: CGFloat = 0
+    public var width: CGFloat = 0
 
-    init() {}
+    public init() {}
 }
