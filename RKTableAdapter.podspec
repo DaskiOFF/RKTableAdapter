@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RKTableAdapter'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Table Adapter'
 
 # This description is used to generate tags and improve search results.
@@ -19,7 +19,9 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
   Table Adapter
-  
+  0.1.3
+    fix CellCalculator and CellLayout (add open and public)
+
   0.1.2
     Add CellCalculator and CellLayout
 
