@@ -16,7 +16,7 @@ open class CellCalculator<LayoutType, ViewModelType> {
     }
 
     @discardableResult
-    public func calculate(with viewModel: ViewModelType, width: CGFloat) -> LayoutType {
+    open func calculate(with viewModel: ViewModelType, width: CGFloat) -> LayoutType {
         preconditionFailure("This method must be overridden")
     }
 }
