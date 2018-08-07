@@ -15,6 +15,12 @@ open class TableSwitchCellVM: CellVM, Equatable {
     public var isEnabled: Bool = true {
         didSet { view?.configure(with: self) }
     }
+    public var onTintColor: UIColor? {
+        didSet { view?.configure(with: self) }
+    }
+    public var thumbTintColor: UIColor? {
+        didSet { view?.configure(with: self) }
+    }
     public var changeAction: ChangeActionType?
     
     // MARK: Init
@@ -106,6 +112,8 @@ open class TableSwitchCell: UITableViewCell, ConfigurableCell {
         lbTitle.text = viewModel.title
         vwSwitch.setOn(viewModel.isOn, animated: true)
         vwSwitch.isEnabled = viewModel.isEnabled
+        vwSwitch.onTintColor = viewModel.onTintColor
+        vwSwitch.thumbTintColor = viewModel.thumbTintColor
     }
     
     // MARK: Actions
