@@ -13,7 +13,28 @@ https://daskioff.github.io/RKTableAdapter/
 
 How use -> https://daskioff.github.io/RKTableAdapter/Classes/TableViewAdapter.html
 
-## Requirements
+## Cell Templates
+Generate Cell from templates with [Jessica](https://github.com/daskioff/jessica)
+
+Download cell templates
+
+```
+jessica generator pull github.com/daskioff/jessica_templates rk_table_adapter
+```
+
+Fix `output_paths` in `templates.yml` for your project
+
+### Usage
+
+[Jessica Generator](https://github.com/DaskiOFF/jessica#generator)
+
+```
+jessica generator gen cell CELL_NAME
+
+or
+
+jessica generator gen cell_calc CELL_NAME
+```
 
 ## Installation
 
