@@ -62,9 +62,9 @@ import UIKit
 open class TableViewAdapter {
 
     // MARK: - Properties
-    private var _list: TableList = TableList()
+    private var _list: AdapterList = AdapterList()
     /// Описание данных таблицы
-    public var list: TableList { return _list }
+    public var list: AdapterList { return _list }
 
     private var tableViewDelegate: TableViewAdapterDelegate!
 
@@ -75,7 +75,7 @@ open class TableViewAdapter {
     public let callbacks: TableAdapterCallbacks = TableAdapterCallbacks()
 
     /// Обработка методов scrollView
-    public let scrollViewCallbacks: TableAdapterScrollViewCallbacks = TableAdapterScrollViewCallbacks()
+    public let scrollViewCallbacks: AdapterScrollViewCallbacks = AdapterScrollViewCallbacks()
     
     // MARK: - Dependencies
     public var tableView: UITableView
@@ -99,13 +99,13 @@ open class TableViewAdapter {
     }
 
     // MARK: - Reload
-    public func reload(with tableList: TableList? = nil) {
+    public func reload(with tableList: AdapterList? = nil) {
         let oldList = self._list
 
         if let list = tableList {
             self._list = list
         } else {
-            self._list = TableList()
+            self._list = AdapterList()
         }
         registerCells()
 

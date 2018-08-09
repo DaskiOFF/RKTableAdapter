@@ -1,11 +1,3 @@
-//
-//  BatchUpdater.swift
-//  TestBatchUpdate
-//
-//  Created by Roman Kotov on 14/07/2018.
-//  Copyright © 2018 Roman Kotov. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -52,7 +44,7 @@ class BatchUpdater {
             rowsChanges = rowsChanges.insert(changes)
         }
 
-        return (changesSections, rowsChanges)
+        return (changesSections.sorted(), rowsChanges.sorted())
     }
 
     private func deepHashsSectionsReloads(for sectionsChanges: SectionsChanges,

@@ -1,6 +1,6 @@
 import UIKit
 
-open class TableRowSwitch: TableRow<TableSwitchCell> { }
+open class TableRowSwitch: AdapterRow<TableSwitchCell> { }
 
 // MARK: - ViewModel
 open class TableSwitchCellVM: CellVM, Equatable {

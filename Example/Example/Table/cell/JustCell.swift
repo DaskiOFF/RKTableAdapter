@@ -1,11 +1,3 @@
-//
-//  JustCell.swift
-//  Example
-//
-//  Created by Roman Kotov on 10/07/2018.
-//  Copyright © 2018 Roman Kotov. All rights reserved.
-//
-
 import UIKit
 import RKTableAdapter
 

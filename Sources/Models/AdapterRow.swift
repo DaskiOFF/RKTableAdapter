@@ -1,6 +1,12 @@
 import UIKit
 
-open class TableRow<CellType: ConfigurableCell>: RowConfigurable where CellType: UITableViewCell {
+@available(*, deprecated, renamed: "AdapterRow")
+public typealias TableRow = AdapterRow
+
+@available(*, deprecated, renamed: "AdapterRow")
+public typealias CollectionRow = AdapterRow
+
+open class AdapterRow<CellType: ConfigurableCell>: RowConfigurable {
     // MARK: - Properties
     /// Модель данных
     public let viewModel: CellType.ViewModelType
@@ -39,6 +45,12 @@ open class TableRow<CellType: ConfigurableCell>: RowConfigurable where CellType:
         }
     }
 
+    public override func configure(collectionCell: UICollectionViewCell) {
+        if let configurableCell = collectionCell as? CellType {
+            configurableCell.configure(with: viewModel)
+        }
+    }
+
     /// :nodoc:
     public override var reuseId: String {
         return CellType.reuseId
@@ -62,7 +74,7 @@ open class TableRow<CellType: ConfigurableCell>: RowConfigurable where CellType:
     // MARK: - DeepHashable
     /// :nodoc:
     public override func equal(object: Any?) -> Bool {
-        guard let object = object as? TableRow<CellType> else { return false }
+        guard let object = object as? AdapterRow<CellType> else { return false }
 
         return self.viewModel == object.viewModel
     }
