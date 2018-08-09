@@ -1,9 +1,6 @@
 import Foundation
 
-@available(*, deprecated, renamed: "AdapterList")
 public typealias TableList = AdapterList
-
-@available(*, deprecated, renamed: "AdapterList")
 public typealias CollectionList = AdapterList
 
 /// Модель описывающая данные для таблицы

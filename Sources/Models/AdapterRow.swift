@@ -1,10 +1,7 @@
 import UIKit
 
-@available(*, deprecated, renamed: "AdapterRow")
 public typealias TableRow = AdapterRow
-
-@available(*, deprecated, renamed: "AdapterRow")
-public typealias CollectionRow = AdapterRow
+public typealias CollectionItem = AdapterRow
 
 open class AdapterRow<CellType: ConfigurableCell>: RowConfigurable {
     // MARK: - Properties

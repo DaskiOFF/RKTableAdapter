@@ -1,9 +1,6 @@
 import Foundation
 
-@available(*, deprecated, renamed: "AdapterSection")
 public typealias TableSection = AdapterSection
-
-@available(*, deprecated, renamed: "AdapterSection")
 public typealias CollectionSection = AdapterSection
 
 open class AdapterSection: BatchUpdateSection, Hashable  {
