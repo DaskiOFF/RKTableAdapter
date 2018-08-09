@@ -61,6 +61,18 @@ open class CellVM: RowHeightComputable {
     }
 }
 
+public typealias CollectionCellVM = CellVM & CollectionItemSizeComputable
+
+public protocol CollectionItemSizeComputable: class {
+    var estimatedSize: CGSize? { get }
+    var defaultSize: CGSize? { get }
+}
+
+public extension CollectionItemSizeComputable {
+    var estimatedSize: CGSize? { return nil }
+    var defaultSize: CGSize? { return nil }
+}
+
 /// :nodoc:
 open class RowConfigurable: RowHeightComputable, DeepHashable {
     // MARK: Properties
@@ -87,10 +99,17 @@ open class RowConfigurable: RowHeightComputable, DeepHashable {
     }
     
     // MARK: Configure
-    /// Метод конфигурации ячейки с помощью viewModel
+    /// Метод конфигурации ячейки TableView с помощью viewModel
     ///
     /// - Parameter cell: Ячейка, которую необходимо сконфигурировать
     func configure(_ cell: UITableViewCell) {
+        preconditionFailure("This method must be overridden")
+    }
+
+    /// Метод конфигурации ячейки CollectionView с помощью viewModel
+    ///
+    /// - Parameter collectionCell: Ячейка, которую необходимо сконфигурировать
+    func configure(collectionCell: UICollectionViewCell) {
         preconditionFailure("This method must be overridden")
     }
 

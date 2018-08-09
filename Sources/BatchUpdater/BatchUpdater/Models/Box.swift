@@ -1,11 +1,3 @@
-//
-//  Box.swift
-//  TestBatchUpdate
-//
-//  Created by Roman Kotov on 14/07/2018.
-//  Copyright © 2018 Roman Kotov. All rights reserved.
-//
-
 import Foundation
 
 struct Box: DeepHashable {

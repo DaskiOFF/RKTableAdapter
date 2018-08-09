@@ -1,11 +1,3 @@
-//
-//  SectionChanges.swift
-//  TestBatchUpdate
-//
-//  Created by Roman Kotov on 14/07/2018.
-//  Copyright © 2018 Roman Kotov. All rights reserved.
-//
-
 import Foundation
 
 /// Changes rows in section(s)
@@ -34,5 +26,14 @@ struct SectionChanges {
         result.moves.append(contentsOf: new.moves)
 
         return result
+    }
+
+    func sorted() -> SectionChanges {
+        var sortedResult = self
+
+        sortedResult.deletes = sortedResult.deletes.sorted(by: >)
+        sortedResult.inserts = sortedResult.inserts.sorted(by: <)
+
+        return sortedResult
     }
 }

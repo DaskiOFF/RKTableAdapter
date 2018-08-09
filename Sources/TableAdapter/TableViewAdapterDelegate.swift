@@ -1,11 +1,3 @@
-//
-//  TableViewAdapterDelegate.swift
-//  RKTableAdapter
-//
-//  Created by Roman Kotov on 09/07/2018.
-//  Copyright © 2018 Roman Kotov. All rights reserved.
-//
-
 import UIKit
 
 class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
@@ -31,17 +23,18 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
     }
 
     // MARK: - getters
-    private func section(for index: Int) -> TableSection? {
+    private func section(for index: Int) -> AdapterSection? {
         guard index < holder.list.sections.count else { return nil }
         return holder.list.sections[index]
     }
 
-    private func row(for section: TableSection, index: Int) -> RowConfigurable? {
+    private func row(for section: AdapterSection, index: Int) -> RowConfigurable? {
         guard index < section.rows.count else { return nil }
         return section.rows[index]
     }
 
     // MARK: - UITableViewDelegate, UITableViewDataSource
+    // MARK: Size
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let row = holder.list.sections[indexPath.section].rows[indexPath.row]
         return row.defaultHeight ??
@@ -49,6 +42,7 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
         TableViewAutomaticDimension
     }
 
+    // MARK: Selecting
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let section = section(for: indexPath.section),
             let row = row(for: section, index: indexPath.row)
@@ -60,6 +54,7 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
         row.cellVM.action?(row.cellVM.userInfo ?? row.cellVM)
     }
 
+    // MARK: Number sections, items
     func numberOfSections(in tableView: UITableView) -> Int {
         return holder.list.sections.count
     }
@@ -68,6 +63,7 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
         return holder.list.sections[section].rows.count
     }
 
+    // MARK: Cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let row = section(for: indexPath.section)?.rows[indexPath.row] else { fatalError() }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: row.reuseId) else { fatalError() }
@@ -137,13 +133,13 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
     }
 
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        guard let tableSection = self.section(for: section) else { return }
-        holder.callbacks.willDisplayHeaderView?(tableView, view, tableSection, section)
+        guard let AdapterSection = self.section(for: section) else { return }
+        holder.callbacks.willDisplayHeaderView?(tableView, view, AdapterSection, section)
     }
 
     func tableView(_ tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
-        guard let tableSection = self.section(for: section) else { return }
-        holder.callbacks.didEndDisplayHeaderView?(tableView, view, tableSection, section)
+        guard let AdapterSection = self.section(for: section) else { return }
+        holder.callbacks.didEndDisplayHeaderView?(tableView, view, AdapterSection, section)
     }
 
     // Footer
@@ -163,13 +159,13 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
     }
 
     func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-        guard let tableSection = self.section(for: section) else { return }
-        holder.callbacks.willDisplayFooterView?(tableView, view, tableSection, section)
+        guard let AdapterSection = self.section(for: section) else { return }
+        holder.callbacks.willDisplayFooterView?(tableView, view, AdapterSection, section)
     }
 
     func tableView(_ tableView: UITableView, didEndDisplayingFooterView view: UIView, forSection section: Int) {
-        guard let tableSection = self.section(for: section) else { return }
-        holder.callbacks.didEndDisplayFooterView?(tableView, view, tableSection, section)
+        guard let AdapterSection = self.section(for: section) else { return }
+        holder.callbacks.didEndDisplayFooterView?(tableView, view, AdapterSection, section)
     }
 
     // MARK: - ScroolViewDelegate

@@ -1,32 +1,34 @@
-//
-//  ViewController.swift
-//  Example
-//
-//  Created by Roman Kotov on 10/07/2018.
-//  Copyright © 2018 Roman Kotov. All rights reserved.
-//
-
 import UIKit
-import RKTableAdapter
 
 class ViewController: UIViewController {
     // MARK: - Variables
-    lazy var tableAdapter = TableViewAdapter(tableView: self.tableView)
 
     // MARK: - UI
-    let tableView: UITableView = UITableView(frame: .zero, style: .grouped)
+    lazy var btnTable: UIButton = {
+        let btn = UIButton(type: .system)
+
+        btn.setTitle("Table", for: .normal)
+        btn.addTarget(self, action: #selector(openTable), for: .touchUpInside)
+        return btn
+    }()
+    lazy var btnCollection: UIButton = {
+        let btn = UIButton(type: .system)
+
+        btn.setTitle("Collection", for: .normal)
+        btn.addTarget(self, action: #selector(openCollection), for: .touchUpInside)
+        return btn
+    }()
 
     // MARK: - Init / Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configure()
-        setupTableAdapter()
-        configureTableAdapterContent()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+
     }
 
     // MARK: - Configure
@@ -34,48 +36,32 @@ class ViewController: UIViewController {
         configureNavigationBar()
         view.backgroundColor = .white
 
-        tableView.frame = view.bounds
-        view.addSubview(tableView)
-    }
+        view.addSubview(btnTable)
+        btnTable.sizeToFit()
+        btnTable.center = view.center
+        btnTable.center.y -= 40
 
-    private func setupTableAdapter() {
-
+        view.addSubview(btnCollection)
+        btnCollection.sizeToFit()
+        btnCollection.center = view.center
     }
 
     private func configureNavigationBar() {
         title = "Main"
-
-        let btn1 = UIBarButtonItem(title: "1", style: .plain, target: self, action: #selector(action1))
-        let btn2 = UIBarButtonItem(title: "2", style: .plain, target: self, action: #selector(action2))
-        navigationItem.setRightBarButtonItems([btn1, btn2], animated: true)
-    }
-
-    private func configureTableAdapterContent() {
-        let tableList = DataGenerator.generateViewModels1()
-
-        tableAdapter.reload(with: tableList)
     }
 
     // MARK: - Actions
     @objc
-    func action1() {
-        let tableList = DataGenerator.generateViewModels1()
-
-        tableAdapter.reload(with: tableList)
+    func openTable() {
+        let vc = TableVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     @objc
-    func action2() {
-        let tableList = DataGenerator.generateViewModels2()
-
-        tableAdapter.reload(with: tableList)
+    func openCollection() {
+        let vc = CollectionVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
-
-    // MARK: - TableAdapter
-    // MARK: TableAdapter Make sections
-
-    // MARK: TableAdapter Actions
 
     // MARK: - Private
 }
-
