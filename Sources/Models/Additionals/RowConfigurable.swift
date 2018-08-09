@@ -74,7 +74,7 @@ public extension CollectionItemSizeComputable {
 }
 
 /// :nodoc:
-open class RowConfigurable: RowHeightComputable, DeepHashable {
+open class RowConfigurable: RowHeightComputable, CollectionItemSizeComputable, DeepHashable {
     // MARK: Properties
     /// Идентификатор строки
     public internal(set) var id: String = ""
@@ -91,10 +91,20 @@ open class RowConfigurable: RowHeightComputable, DeepHashable {
         preconditionFailure("This method must be overridden")
     }
 
+    // MARK: RowHeightComputable
     public var estimatedHeight: CGFloat? {
         preconditionFailure("This method must be overridden")
     }
     public var defaultHeight: CGFloat? {
+        preconditionFailure("This method must be overridden")
+    }
+
+    // MARK: CollectionItemSizeComputable
+    public var estimatedSize: CGSize? {
+        preconditionFailure("This method must be overridden")
+    }
+
+    public var defaultSize: CGSize? {
         preconditionFailure("This method must be overridden")
     }
     

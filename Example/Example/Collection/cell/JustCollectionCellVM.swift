@@ -18,7 +18,7 @@ class JustCollectionCellVM: CollectionCellVM, Equatable {
 
     // MARK: - CollectionItemSizeComputable
     var defaultSize: CGSize? {
-        return CGSize(width: 50, height: 50)
+        return CGSize(width: 140, height: 120)
     }
 
     // MARK: - Equatable

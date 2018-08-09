@@ -64,8 +64,26 @@ open class AdapterRow<CellType: ConfigurableCell>: RowConfigurable {
     }
 
     /// :nodoc:
-    public override  var defaultHeight: CGFloat? {
+    public override var defaultHeight: CGFloat? {
         return viewModel.defaultHeight
+    }
+
+    /// :nodoc:
+    public override var estimatedSize: CGSize? {
+        guard let viewModel = self.viewModel as? CollectionItemSizeComputable else {
+            return nil
+        }
+
+        return viewModel.estimatedSize
+    }
+
+    /// :nodoc:
+    public override var defaultSize: CGSize? {
+        guard let viewModel = self.viewModel as? CollectionItemSizeComputable else {
+            return nil
+        }
+
+        return viewModel.defaultSize
     }
     
     // MARK: - DeepHashable

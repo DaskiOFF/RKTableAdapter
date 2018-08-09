@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CollectionViewAdapter Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CollectionViewAdapter" class="dashAnchor"></a>
+    <a title="CollectionViewAdapter Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RKTableAdapter Docs</a> (31% documented)</p>
+        <p class="header-right"><a href="https://github.com/DaskiOFF/RKTableAdapter"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RKTableAdapter Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CollectionViewAdapter Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Main.html">Main</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/TableViewAdapter.html">TableViewAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableAdapterCallbacks.html">TableAdapterCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Main.html#/s:14RKTableAdapter9TableLista">TableList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Main.html#/s:14RKTableAdapter12TableSectiona">TableSection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Main.html#/s:14RKTableAdapter8TableRowa">TableRow</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Cell ViewModel.html">Cell ViewModel</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CellVM.html">CellVM</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Cell.html">Cell</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConfigurableCell.html">ConfigurableCell</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Internal.html">Internal</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConfigureCell.html">ConfigureCell</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Standard Rows.html">Standard Rows</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Standard Rows.html#/s:14RKTableAdapter14TableRowSwitchC">TableRowSwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableSwitchCell.html">TableSwitchCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableSwitchCellVM.html">TableSwitchCellVM</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AdapterList.html">AdapterList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AdapterRow.html">AdapterRow</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AdapterScrollViewCallbacks.html">AdapterScrollViewCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AdapterSection.html">AdapterSection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CellCalculator.html">CellCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CellLayout.html">CellLayout</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CollectionAdapterCallbacks.html">CollectionAdapterCallbacks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CollectionViewAdapter.html">CollectionViewAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Heckel.html">Heckel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IndexPathConverter.html">IndexPathConverter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WagnerFischer.html">WagnerFischer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Change.html">Change</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Functions.html">Other Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:14RKTableAdapter4diffSayAA6ChangeOyxGGSayxG3old_AG3newAA9DiffAware_p9algorithmtAA12DeepHashableRzlF">diff(old:new:algorithm:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CollectionItemSizeComputable.html">CollectionItemSizeComputable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DeepEquatable.html">DeepEquatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DeepHashable.html">DeepHashable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DiffAware.html">DiffAware</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Structs.html">Other Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ChangeWithIndexPath.html">ChangeWithIndexPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Delete.html">Delete</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Insert.html">Insert</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Move.html">Move</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Replace.html">Replace</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Typealiases.html">Other Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:14RKTableAdapter16CollectionCellVMa">CollectionCellVM</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:14RKTableAdapter14CollectionItema">CollectionItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:14RKTableAdapter14CollectionLista">CollectionList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:14RKTableAdapter17CollectionSectiona">CollectionSection</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CollectionViewAdapter</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">CollectionViewAdapter</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter014CollectionViewB0C4listAA0B4ListCvp"></a>
+                    <a name="//apple_ref/swift/Property/list" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter014CollectionViewB0C4listAA0B4ListCvp">list</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Описание данных таблицы</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">list</span><span class="p">:</span> <span class="kt"><a href="../Classes/AdapterList.html">AdapterList</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Callbacks"></a>
+                <a name="//apple_ref/swift/Section/Callbacks" class="dashAnchor"></a>
+                <a href="#/Callbacks">
+                  <h3 class="section-name">Callbacks</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter014CollectionViewB0C9callbacksAA05TableB9CallbacksCvp"></a>
+                    <a name="//apple_ref/swift/Property/callbacks" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter014CollectionViewB0C9callbacksAA05TableB9CallbacksCvp">callbacks</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Обработка методов таблицы</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">callbacks</span><span class="p">:</span> <span class="kt"><a href="../Classes/TableAdapterCallbacks.html">TableAdapterCallbacks</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter014CollectionViewB0C06scrollD9CallbacksAA0b6ScrolldF0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/scrollViewCallbacks" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter014CollectionViewB0C06scrollD9CallbacksAA0b6ScrolldF0Cvp">scrollViewCallbacks</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Обработка методов scrollView</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scrollViewCallbacks</span><span class="p">:</span> <span class="kt"><a href="../Classes/AdapterScrollViewCallbacks.html">AdapterScrollViewCallbacks</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Dependencies"></a>
+                <a name="//apple_ref/swift/Section/Dependencies" class="dashAnchor"></a>
+                <a href="#/Dependencies">
+                  <h3 class="section-name">Dependencies</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter014CollectionViewB0C010collectionD0So012UICollectionD0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/collectionView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter014CollectionViewB0C010collectionD0So012UICollectionD0Cvp">collectionView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/LifeCycle"></a>
+                <a name="//apple_ref/swift/Section/LifeCycle" class="dashAnchor"></a>
+                <a href="#/LifeCycle">
+                  <h3 class="section-name">LifeCycle</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter014CollectionViewB0CACSo012UICollectionD0C010collectionD0_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(collectionView:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter014CollectionViewB0CACSo012UICollectionD0C010collectionD0_tcfc">init(collectionView:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Reload"></a>
+                <a name="//apple_ref/swift/Section/Reload" class="dashAnchor"></a>
+                <a href="#/Reload">
+                  <h3 class="section-name">Reload</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter014CollectionViewB0C6reloadyAA0B4ListCSg4with_tF"></a>
+                    <a name="//apple_ref/swift/Method/reload(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter014CollectionViewB0C6reloadyAA0B4ListCSg4with_tF">reload(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reload</span><span class="p">(</span><span class="n">with</span> <span class="nv">tableList</span><span class="p">:</span> <span class="kt"><a href="../Classes/AdapterList.html">AdapterList</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2018 <a class="link" href="http://t.me/daskioff" target="_blank" rel="external">DaskiOFF</a> under MIT License</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

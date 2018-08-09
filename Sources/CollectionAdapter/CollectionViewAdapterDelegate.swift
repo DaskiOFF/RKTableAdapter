@@ -1,6 +1,9 @@
 import UIKit
 
-class CollectionViewAdapterDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+class CollectionViewAdapterDelegate: NSObject,
+    UICollectionViewDelegate,
+    UICollectionViewDataSource,
+UICollectionViewDelegateFlowLayout {
     // MARK: - Properties
     unowned var holder: CollectionViewAdapter
     var automaticHeaderFooterHeight: CGFloat = 0
@@ -19,6 +22,17 @@ class CollectionViewAdapterDelegate: NSObject, UICollectionViewDelegate, UIColle
     private func row(for section: AdapterSection, index: Int) -> RowConfigurable? {
         guard index < section.rows.count else { return nil }
         return section.rows[index]
+    }
+
+    // MARK: - UICollectionViewDelegateFlowLayout
+    // MARK: Size
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let row = holder.list.sections[indexPath.section].rows[indexPath.row]
+
+        guard let size = row.defaultSize ?? row.estimatedSize else {
+            fatalError("Need size for cell")
+        }
+        return size
     }
 
     // MARK: - UICollectionViewDelegate, UICollectionViewDataSource

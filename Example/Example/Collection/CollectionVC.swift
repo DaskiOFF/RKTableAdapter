@@ -8,7 +8,6 @@ class CollectionVC: UIViewController {
     // MARK: - UI
     lazy var collectionView: UICollectionView = {
         let flow = UICollectionViewFlowLayout()
-        flow.itemSize = CGSize(width: 90, height: 50)
         flow.minimumInteritemSpacing = 10
         flow.minimumLineSpacing = 10
         flow.sectionInset.top = 20
