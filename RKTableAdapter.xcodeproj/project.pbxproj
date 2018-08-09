@@ -31,15 +31,18 @@
 		BB6884BB20CDD6EA00B507BB /* RKTableAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = BB6884AD20CDD6EA00B507BB /* RKTableAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB6884D420CDD74A00B507BB /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884C520CDD74A00B507BB /* TableViewAdapter.swift */; };
 		BB6884D520CDD74A00B507BB /* TableAdapterCallbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884C720CDD74A00B507BB /* TableAdapterCallbacks.swift */; };
-		BB6884D620CDD74A00B507BB /* TableAdapterScrollViewCallbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884C820CDD74A00B507BB /* TableAdapterScrollViewCallbacks.swift */; };
-		BB6884D720CDD74A00B507BB /* TableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884CA20CDD74A00B507BB /* TableList.swift */; };
-		BB6884D820CDD74A00B507BB /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884CB20CDD74A00B507BB /* TableRow.swift */; };
-		BB6884D920CDD74A00B507BB /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884CC20CDD74A00B507BB /* TableSection.swift */; };
+		BB6884D620CDD74A00B507BB /* AdapterScrollViewCallbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884C820CDD74A00B507BB /* AdapterScrollViewCallbacks.swift */; };
+		BB6884D720CDD74A00B507BB /* AdapterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884CA20CDD74A00B507BB /* AdapterList.swift */; };
+		BB6884D820CDD74A00B507BB /* AdapterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884CB20CDD74A00B507BB /* AdapterRow.swift */; };
+		BB6884D920CDD74A00B507BB /* AdapterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884CC20CDD74A00B507BB /* AdapterSection.swift */; };
 		BB6884DA20CDD74A00B507BB /* TableRowSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884CE20CDD74A00B507BB /* TableRowSwitch.swift */; };
 		BB6884DB20CDD74A00B507BB /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884D020CDD74A00B507BB /* ConfigurableCell.swift */; };
 		BB6884DC20CDD74A00B507BB /* RowConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6884D120CDD74A00B507BB /* RowConfigurable.swift */; };
 		BBAA8C2F211A25B800DB621F /* CellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA8C2E211A25B800DB621F /* CellLayout.swift */; };
 		BBAA8C31211A25DA00DB621F /* CellCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA8C30211A25DA00DB621F /* CellCalculator.swift */; };
+		BBB7ACCC211C6CB3004BA563 /* CollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7ACCB211C6CB3004BA563 /* CollectionViewAdapter.swift */; };
+		BBB7ACCE211C6CC9004BA563 /* CollectionViewAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7ACCD211C6CC9004BA563 /* CollectionViewAdapterDelegate.swift */; };
+		BBB7ACD4211CA4E0004BA563 /* CollectionAdapterCallbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7ACD3211CA4E0004BA563 /* CollectionAdapterCallbacks.swift */; };
 		BBBC38D620F3E212001B8ED4 /* TableViewAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,16 +89,19 @@
 		BB6884BA20CDD6EA00B507BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB6884C520CDD74A00B507BB /* TableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
 		BB6884C720CDD74A00B507BB /* TableAdapterCallbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableAdapterCallbacks.swift; sourceTree = "<group>"; };
-		BB6884C820CDD74A00B507BB /* TableAdapterScrollViewCallbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableAdapterScrollViewCallbacks.swift; sourceTree = "<group>"; };
-		BB6884CA20CDD74A00B507BB /* TableList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableList.swift; sourceTree = "<group>"; };
-		BB6884CB20CDD74A00B507BB /* TableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
-		BB6884CC20CDD74A00B507BB /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		BB6884C820CDD74A00B507BB /* AdapterScrollViewCallbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterScrollViewCallbacks.swift; sourceTree = "<group>"; };
+		BB6884CA20CDD74A00B507BB /* AdapterList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterList.swift; sourceTree = "<group>"; };
+		BB6884CB20CDD74A00B507BB /* AdapterRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterRow.swift; sourceTree = "<group>"; };
+		BB6884CC20CDD74A00B507BB /* AdapterSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterSection.swift; sourceTree = "<group>"; };
 		BB6884CE20CDD74A00B507BB /* TableRowSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowSwitch.swift; sourceTree = "<group>"; };
 		BB6884D020CDD74A00B507BB /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		BB6884D120CDD74A00B507BB /* RowConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowConfigurable.swift; sourceTree = "<group>"; };
 		BB6884D320CDD74A00B507BB /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		BBAA8C2E211A25B800DB621F /* CellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLayout.swift; sourceTree = "<group>"; };
 		BBAA8C30211A25DA00DB621F /* CellCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCalculator.swift; sourceTree = "<group>"; };
+		BBB7ACCB211C6CB3004BA563 /* CollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapter.swift; sourceTree = "<group>"; };
+		BBB7ACCD211C6CC9004BA563 /* CollectionViewAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterDelegate.swift; sourceTree = "<group>"; };
+		BBB7ACD3211CA4E0004BA563 /* CollectionAdapterCallbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAdapterCallbacks.swift; sourceTree = "<group>"; };
 		BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterDelegate.swift; sourceTree = "<group>"; };
 		C8D0D66D03ACA336BAE61E10 /* Pods-RKTableAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKTableAdapter.release.xcconfig"; path = "Pods/Target Support Files/Pods-RKTableAdapter/Pods-RKTableAdapter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,8 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				BB27990D20FA8F9A00056FD8 /* SectionsChanges.swift */,
-				BB27990E20FA8F9A00056FD8 /* Box.swift */,
 				BB27990F20FA8F9A00056FD8 /* SectionChanges.swift */,
+				BB27990E20FA8F9A00056FD8 /* Box.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,9 +257,9 @@
 		BB6884C420CDD74A00B507BB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				BB6884C520CDD74A00B507BB /* TableViewAdapter.swift */,
-				BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */,
-				BB6884C620CDD74A00B507BB /* Callbacks */,
+				BBB7ACD5211CA4EF004BA563 /* AdapterCallbacks */,
+				BBB7ACD0211CA476004BA563 /* TableAdapter */,
+				BBB7ACD1211CA483004BA563 /* CollectionAdapter */,
 				BB6884C920CDD74A00B507BB /* Models */,
 				BB6884D220CDD74A00B507BB /* Extensions */,
 				BB27990820FA8F9A00056FD8 /* BatchUpdater */,
@@ -265,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				BB6884C720CDD74A00B507BB /* TableAdapterCallbacks.swift */,
-				BB6884C820CDD74A00B507BB /* TableAdapterScrollViewCallbacks.swift */,
 			);
 			path = Callbacks;
 			sourceTree = "<group>";
@@ -273,21 +278,22 @@
 		BB6884C920CDD74A00B507BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BB6884CA20CDD74A00B507BB /* TableList.swift */,
-				BB6884CB20CDD74A00B507BB /* TableRow.swift */,
-				BB6884CC20CDD74A00B507BB /* TableSection.swift */,
-				BB6884CD20CDD74A00B507BB /* StandardRows */,
+				BB6884CA20CDD74A00B507BB /* AdapterList.swift */,
+				BB6884CB20CDD74A00B507BB /* AdapterRow.swift */,
+				BB6884CC20CDD74A00B507BB /* AdapterSection.swift */,
+				BB6884CD20CDD74A00B507BB /* StandardTableCells */,
+				BBB7ACCF211CA3C7004BA563 /* StandardCollectionCells */,
 				BB6884CF20CDD74A00B507BB /* Additionals */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		BB6884CD20CDD74A00B507BB /* StandardRows */ = {
+		BB6884CD20CDD74A00B507BB /* StandardTableCells */ = {
 			isa = PBXGroup;
 			children = (
 				BB6884CE20CDD74A00B507BB /* TableRowSwitch.swift */,
 			);
-			path = StandardRows;
+			path = StandardTableCells;
 			sourceTree = "<group>";
 		};
 		BB6884CF20CDD74A00B507BB /* Additionals */ = {
@@ -307,6 +313,49 @@
 				BB6884D320CDD74A00B507BB /* UITableView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BBB7ACCF211CA3C7004BA563 /* StandardCollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StandardCollectionCells;
+			sourceTree = "<group>";
+		};
+		BBB7ACD0211CA476004BA563 /* TableAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				BB6884C620CDD74A00B507BB /* Callbacks */,
+				BB6884C520CDD74A00B507BB /* TableViewAdapter.swift */,
+				BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */,
+			);
+			path = TableAdapter;
+			sourceTree = "<group>";
+		};
+		BBB7ACD1211CA483004BA563 /* CollectionAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				BBB7ACD2211CA498004BA563 /* Callbacks */,
+				BBB7ACCB211C6CB3004BA563 /* CollectionViewAdapter.swift */,
+				BBB7ACCD211C6CC9004BA563 /* CollectionViewAdapterDelegate.swift */,
+			);
+			path = CollectionAdapter;
+			sourceTree = "<group>";
+		};
+		BBB7ACD2211CA498004BA563 /* Callbacks */ = {
+			isa = PBXGroup;
+			children = (
+				BBB7ACD3211CA4E0004BA563 /* CollectionAdapterCallbacks.swift */,
+			);
+			path = Callbacks;
+			sourceTree = "<group>";
+		};
+		BBB7ACD5211CA4EF004BA563 /* AdapterCallbacks */ = {
+			isa = PBXGroup;
+			children = (
+				BB6884C820CDD74A00B507BB /* AdapterScrollViewCallbacks.swift */,
+			);
+			path = AdapterCallbacks;
 			sourceTree = "<group>";
 		};
 		C70C49DF62816E991031879F /* Pods */ = {
@@ -439,19 +488,21 @@
 			files = (
 				BB6884DC20CDD74A00B507BB /* RowConfigurable.swift in Sources */,
 				BB27993320FA8F9B00056FD8 /* UICollectionView+Extensions.swift in Sources */,
-				BB6884D620CDD74A00B507BB /* TableAdapterScrollViewCallbacks.swift in Sources */,
+				BB6884D620CDD74A00B507BB /* AdapterScrollViewCallbacks.swift in Sources */,
 				BB6884D420CDD74A00B507BB /* TableViewAdapter.swift in Sources */,
 				BB27992320FA8F9B00056FD8 /* BatchUpdater.swift in Sources */,
 				BB6884DB20CDD74A00B507BB /* ConfigurableCell.swift in Sources */,
 				BB27992C20FA8F9B00056FD8 /* WagnerFischer.swift in Sources */,
+				BBB7ACCE211C6CC9004BA563 /* CollectionViewAdapterDelegate.swift in Sources */,
 				BB27992B20FA8F9B00056FD8 /* DeepDiff.swift in Sources */,
-				BB6884D920CDD74A00B507BB /* TableSection.swift in Sources */,
+				BB6884D920CDD74A00B507BB /* AdapterSection.swift in Sources */,
 				BBBC38D620F3E212001B8ED4 /* TableViewAdapterDelegate.swift in Sources */,
-				BB6884D820CDD74A00B507BB /* TableRow.swift in Sources */,
+				BB6884D820CDD74A00B507BB /* AdapterRow.swift in Sources */,
 				BB27992F20FA8F9B00056FD8 /* MoveReducer.swift in Sources */,
-				BB6884D720CDD74A00B507BB /* TableList.swift in Sources */,
+				BB6884D720CDD74A00B507BB /* AdapterList.swift in Sources */,
 				BB27992820FA8F9B00056FD8 /* UITableView+BatchUpdater.swift in Sources */,
 				BBAA8C31211A25DA00DB621F /* CellCalculator.swift in Sources */,
+				BBB7ACD4211CA4E0004BA563 /* CollectionAdapterCallbacks.swift in Sources */,
 				BB27993020FA8F9B00056FD8 /* Change.swift in Sources */,
 				BB27992920FA8F9B00056FD8 /* Array+Extensions.swift in Sources */,
 				BB27992420FA8F9B00056FD8 /* SectionsChanges.swift in Sources */,
@@ -461,6 +512,7 @@
 				BB27992E20FA8F9B00056FD8 /* Heckel.swift in Sources */,
 				BB27992A20FA8F9B00056FD8 /* DeepHashable.swift in Sources */,
 				BB27992D20FA8F9B00056FD8 /* DiffAware.swift in Sources */,
+				BBB7ACCC211C6CB3004BA563 /* CollectionViewAdapter.swift in Sources */,
 				BB6884D520CDD74A00B507BB /* TableAdapterCallbacks.swift in Sources */,
 				BB27993120FA8F9B00056FD8 /* IndexPathConverter.swift in Sources */,
 				BBAA8C2F211A25B800DB621F /* CellLayout.swift in Sources */,

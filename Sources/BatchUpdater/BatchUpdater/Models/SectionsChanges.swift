@@ -1,11 +1,3 @@
-//
-//  SectionsChanges.swift
-//  TestBatchUpdate
-//
-//  Created by Roman Kotov on 14/07/2018.
-//  Copyright © 2018 Roman Kotov. All rights reserved.
-//
-
 import Foundation
 
 /// Changes in sections list
@@ -24,4 +16,13 @@ struct SectionsChanges {
     var updates: IndexSet = []
     /// Index `from` before update, Index `to` after update
     var moves: [Move] = []
+
+    func sorted() -> SectionsChanges {
+        var sortedResult = self
+
+        sortedResult.deletes = IndexSet(sortedResult.deletes.sorted(by: >))
+        sortedResult.inserts = IndexSet(sortedResult.inserts.sorted(by: <))
+
+        return sortedResult
+    }
 }

@@ -1,6 +1,9 @@
 import Foundation
 
-open class TableSection: BatchUpdateSection, Hashable  {
+public typealias TableSection = AdapterSection
+public typealias CollectionSection = AdapterSection
+
+open class AdapterSection: BatchUpdateSection, Hashable  {
     // MARK: - Properties
     /// Идентификатор
     public let id: String
@@ -116,7 +119,7 @@ open class TableSection: BatchUpdateSection, Hashable  {
         return id.hashValue
     }
 
-    public static func == (lhs: TableSection, rhs: TableSection) -> Bool {
+    public static func == (lhs: AdapterSection, rhs: AdapterSection) -> Bool {
         guard lhs.id == rhs.id else { return false }
         guard lhs.headerString == rhs.headerString else { return false }
         guard lhs.headerHeight == rhs.headerHeight else { return false }

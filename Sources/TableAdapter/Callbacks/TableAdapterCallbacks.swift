@@ -2,7 +2,7 @@ import UIKit
 
 open class TableAdapterCallbacks {
     // MARK: - Types
-    public typealias TableData = (section: TableSection, row: RowConfigurable)
+    public typealias TableData = (section: AdapterSection, row: RowConfigurable)
 
     // MARK: - Props
     
@@ -32,7 +32,7 @@ open class TableAdapterCallbacks {
     }
     
     // MARK: - Header / Footer
-    public typealias WillDisplayHeaderFooterView = (UITableView, UIView, TableSection, Int) -> Void
+    public typealias WillDisplayHeaderFooterView = (UITableView, UIView, AdapterSection, Int) -> Void
     public typealias DidEndDisplayHeaderFooterView = WillDisplayHeaderFooterView
     
     private(set) var willDisplayHeaderView: WillDisplayHeaderFooterView?

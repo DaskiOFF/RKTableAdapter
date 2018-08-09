@@ -1,11 +1,3 @@
-//
-//  UITableView.swift
-//  TestBatchUpdate
-//
-//  Created by Roman Kotov on 14/07/2018.
-//  Copyright © 2018 Roman Kotov. All rights reserved.
-//
-
 import UIKit
 
 extension UITableView {

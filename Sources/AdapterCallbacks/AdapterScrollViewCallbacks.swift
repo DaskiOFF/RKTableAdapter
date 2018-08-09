@@ -1,6 +1,6 @@
 import Foundation
 
-open class TableAdapterScrollViewCallbacks {
+open class AdapterScrollViewCallbacks {
     // MARK: - Types
     
     // MARK: - Props

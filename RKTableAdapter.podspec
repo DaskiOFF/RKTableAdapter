@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RKTableAdapter'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = 'Table Adapter'
 
 # This description is used to generate tags and improve search results.
@@ -19,6 +19,10 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
   Table Adapter
+  0.1.8
+    Add Collection Adapter
+    Update Example
+
   0.1.7
     Fix switch cell animation
 
