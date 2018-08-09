@@ -61,6 +61,18 @@ open class CellVM: RowHeightComputable {
     }
 }
 
+public typealias CollectionCellVM = CellVM & CollectionItemSizeComputable
+
+public protocol CollectionItemSizeComputable: class {
+    var estimatedSize: CGSize? { get }
+    var defaultSize: CGSize? { get }
+}
+
+public extension CollectionItemSizeComputable {
+    var estimatedSize: CGSize? { return nil }
+    var defaultSize: CGSize? { return nil }
+}
+
 /// :nodoc:
 open class RowConfigurable: RowHeightComputable, DeepHashable {
     // MARK: Properties

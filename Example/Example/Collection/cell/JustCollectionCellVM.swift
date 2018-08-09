@@ -1,7 +1,7 @@
 import Foundation
 import RKTableAdapter
 
-class JustCollectionCellVM: CellVM, Equatable {
+class JustCollectionCellVM: CollectionCellVM, Equatable {
     // MARK: - Properties
     var title: String = ""
 
@@ -14,6 +14,11 @@ class JustCollectionCellVM: CellVM, Equatable {
     // MARK: - RowHeightComputable
     override var defaultHeight: CGFloat? {
         return 44
+    }
+
+    // MARK: - CollectionItemSizeComputable
+    var defaultSize: CGSize? {
+        return CGSize(width: 50, height: 50)
     }
 
     // MARK: - Equatable
