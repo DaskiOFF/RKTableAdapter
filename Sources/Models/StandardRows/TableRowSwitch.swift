@@ -9,8 +9,13 @@ open class TableSwitchCellVM: CellVM, Equatable {
     public var title: String = "" {
         didSet { view?.configure(with: self) }
     }
-    public var isOn: Bool = false {
-        didSet { view?.configure(with: self) }
+    fileprivate var _isOn: Bool = false
+    public var isOn: Bool {
+        get { return _isOn }
+        set {
+            _isOn = newValue
+            view?.configure(with: self)
+        }
     }
     public var isEnabled: Bool = true {
         didSet { view?.configure(with: self) }
@@ -26,9 +31,9 @@ open class TableSwitchCellVM: CellVM, Equatable {
     // MARK: Init
     public init(title: String, isOn: Bool) {
         self.title = title
-        self.isOn = isOn
+        self._isOn = isOn
         super.init(action: nil, userInfo: nil)
-        
+
         self.isSelectable = false
     }
     
@@ -121,7 +126,7 @@ open class TableSwitchCell: UITableViewCell, ConfigurableCell {
     private func switchChanged() {
         guard let viewModel = self.viewModel else { return }
         
-        viewModel.isOn = vwSwitch.isOn
+        viewModel._isOn = vwSwitch.isOn
         viewModel.changeAction?(viewModel)
     }
 }
