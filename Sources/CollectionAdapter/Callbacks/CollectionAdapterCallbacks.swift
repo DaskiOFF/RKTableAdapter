@@ -2,7 +2,7 @@ import UIKit
 
 open class CollectionAdapterCallbacks {
     // MARK: - Types
-    public typealias CollectionData = (section: AdapterSection, row: RowConfigurable)
+    public typealias CollectionData = (section: CollectionSection, row: CollectionItemConfigurable)
 
     // MARK: - Props
 

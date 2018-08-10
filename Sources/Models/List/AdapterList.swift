@@ -1,13 +1,13 @@
 import Foundation
 
-public typealias TableList = AdapterList
-public typealias CollectionList = AdapterList
+public typealias TableList = AdapterList<TableSection>
+public typealias CollectionList = AdapterList<CollectionSection>
 
-/// Модель описывающая данные для таблицы
-open class AdapterList {
+/// Модель описывающая данные списка для TableViewAdapter и CollectionViewAdapter
+open class AdapterList<SectionType: SectionUniqIdentifier> {
     // MARK: - Properties
     /// Список секций
-    public var sections: [AdapterSection] = []
+    public var sections: [SectionType] = []
     
     // MARK: - Init
     public init() { }
@@ -17,17 +17,16 @@ open class AdapterList {
     /// Найдет или создаст и вернет секцию с указаным идентификатором
     ///
     /// - Parameter id: Идентификатор секции
-    public subscript(id: Int) -> AdapterSection {
+    public subscript(id: Int) -> SectionType {
         get {
             return self["\(id)"]
         }
     }
 
-
     /// Найдет или создаст и вернет секцию с указаным идентификатором
     ///
     /// - Parameter id: Идентификатор секции
-    public subscript(id: String) -> AdapterSection {
+    public subscript(id: String) -> SectionType {
         get {
             for section in sections where section.id == id {
                 return section
@@ -38,8 +37,8 @@ open class AdapterList {
     }
     
     // MARK: - Private
-    private func makeNewSection(with id: String) -> AdapterSection {
-        let newSection = AdapterSection(with: id)
+    private func makeNewSection(with id: String) -> SectionType {
+        let newSection = SectionType(with: id)
         sections.append(newSection)
         return newSection
     }

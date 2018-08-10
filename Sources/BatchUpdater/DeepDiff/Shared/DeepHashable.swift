@@ -21,13 +21,23 @@ extension DeepHashable where Self: Hashable {
         return self.hashValue
     }
 
+//    public func equal(object: Any?) -> Bool {
+//        guard let object = object as? Self else { return false }
+//        return self == object
+//    }
+}
+
+extension String: DeepHashable {
     public func equal(object: Any?) -> Bool {
-        guard let object = object as? Self else { return false }
+        guard let object = object as? String else { return false }
         return self == object
     }
 }
 
-extension String: DeepHashable { }
-
-extension Character: DeepHashable { }
+extension Character: DeepHashable {
+    public func equal(object: Any?) -> Bool {
+        guard let object = object as? Character else { return false }
+        return self == object
+    }
+}
 

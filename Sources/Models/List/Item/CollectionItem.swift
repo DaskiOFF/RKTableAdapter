@@ -1,16 +1,12 @@
 import UIKit
 
-public typealias TableRow = AdapterItem
-public typealias CollectionItem = AdapterItem
-
-open class AdapterItem<CellType: ConfigurableCell>: RowConfigurable {
+open class CollectionItem<CellType: ConfigurableCell>: CollectionItemConfigurable {
     // MARK: - Properties
     /// Модель данных
-    public let viewModel: CellType.ViewModelType
-    /// Модель данных (Для внутреннего использования)
-    /// :nodoc:
-    override var cellVM: CellVM {
-        return viewModel
+    public private(set) var viewModel: CellType.ViewModelType
+
+    override var cellVM: CollectionCellVM {
+        return viewModel as! CollectionCellVM
     }
 
     // MARK: - Init
@@ -19,7 +15,7 @@ open class AdapterItem<CellType: ConfigurableCell>: RowConfigurable {
         super.init()
         self.id = "\(Date().timeIntervalSince1970)"
     }
-    
+
     public init(id: Int, viewModel: CellType.ViewModelType) {
         self.viewModel = viewModel
         super.init()
@@ -31,7 +27,7 @@ open class AdapterItem<CellType: ConfigurableCell>: RowConfigurable {
         super.init()
         self.id = id
     }
-    
+
     // MARK: - RowConfigurable
     /// Конфигурация ячейки
     ///
@@ -58,38 +54,10 @@ open class AdapterItem<CellType: ConfigurableCell>: RowConfigurable {
         return CellType.self
     }
 
-    /// :nodoc:
-    public override var estimatedHeight: CGFloat? {
-        return viewModel.estimatedHeight
-    }
-
-    /// :nodoc:
-    public override var defaultHeight: CGFloat? {
-        return viewModel.defaultHeight
-    }
-
-    /// :nodoc:
-    public override var estimatedSize: CGSize? {
-        guard let viewModel = self.viewModel as? CollectionItemSizeComputable else {
-            return nil
-        }
-
-        return viewModel.estimatedSize
-    }
-
-    /// :nodoc:
-    public override var defaultSize: CGSize? {
-        guard let viewModel = self.viewModel as? CollectionItemSizeComputable else {
-            return nil
-        }
-
-        return viewModel.defaultSize
-    }
-    
     // MARK: - DeepHashable
     /// :nodoc:
     public override func equal(object: Any?) -> Bool {
-        guard let object = object as? AdapterItem<CellType> else { return false }
+        guard let object = object as? CollectionItem<CellType> else { return false }
 
         return self.viewModel == object.viewModel
     }

@@ -22,7 +22,7 @@ class BatchUpdater {
 
     // MARK: - Private
     func changes(forOldSection oldSections: [BatchUpdateSection], and newSections: [BatchUpdateSection]) -> (sectionsChanges: SectionsChanges, rowsChanges: SectionChanges) {
-        let changesSections = diffSet(oldList: oldSections.map({ Box(value: $0) }),
+        var changesSections = diffSet(oldList: oldSections.map({ Box(value: $0) }),
                                       list: newSections.map({ Box(value: $0) }))
         var rowsChanges = SectionChanges()
 
@@ -43,6 +43,34 @@ class BatchUpdater {
                                         newSectionIndex: index)
             rowsChanges = rowsChanges.insert(changes)
         }
+
+        var updatedRowDeleteChanges: [IndexPath] = rowsChanges.deletes
+        var updatedRowInsertChanges: [IndexPath] = rowsChanges.inserts
+        var updatedSectionsMove: [SectionsChanges.Move] = []
+        for sectionMove in changesSections.moves {
+            var needDecomposite: Bool = false
+
+            if updatedRowDeleteChanges.contains(where: { $0.section == sectionMove.from }) {
+                updatedRowDeleteChanges = updatedRowDeleteChanges.filter({ $0.section != sectionMove.from })
+                needDecomposite = true
+            }
+
+            if updatedRowInsertChanges.contains(where: { $0.section == sectionMove.to }) {
+                updatedRowInsertChanges = updatedRowInsertChanges.filter({ $0.section != sectionMove.to })
+                needDecomposite = true
+            }
+
+            if needDecomposite {
+                changesSections.deletes.insert(sectionMove.from)
+                changesSections.inserts.insert(sectionMove.to)
+            } else {
+                updatedSectionsMove.append(sectionMove)
+            }
+        }
+
+        changesSections.moves = updatedSectionsMove
+        rowsChanges.deletes = updatedRowDeleteChanges
+        rowsChanges.inserts = updatedRowInsertChanges
 
         return (changesSections.sorted(), rowsChanges.sorted())
     }

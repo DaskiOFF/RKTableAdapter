@@ -51,16 +51,16 @@ class CollectionVC: UIViewController {
     // MARK: - Actions
     @objc
     func action1() {
-        let tableList = DataGenerator.generateViewModels1(collection: true)
+        let collectionList = DataGenerator.generateCollectionViewModels1()
 
-        collectionAdapter.reload(with: tableList)
+        collectionAdapter.reload(with: collectionList)
     }
 
     @objc
     func action2() {
-        let tableList = DataGenerator.generateViewModels2(collection: true)
+        let collectionList = DataGenerator.generateCollectionViewModels2()
 
-        collectionAdapter.reload(with: tableList)
+        collectionAdapter.reload(with: collectionList)
     }
 
     // MARK: - CollectionAdapter
@@ -69,9 +69,9 @@ class CollectionVC: UIViewController {
     }
 
     private func configureCollectionAdapterContent() {
-        let tableList = DataGenerator.generateViewModels1(collection: true)
+        let collectionList = DataGenerator.generateCollectionViewModels1()
 
-        collectionAdapter.reload(with: tableList)
+        collectionAdapter.reload(with: collectionList)
     }
 
     // MARK: CollectionAdapter Make sections

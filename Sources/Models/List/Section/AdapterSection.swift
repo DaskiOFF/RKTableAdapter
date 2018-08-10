@@ -1,35 +1,17 @@
-import Foundation
+import UIKit
 
-public typealias TableSection = AdapterSection
-public typealias CollectionSection = AdapterSection
-
-open class AdapterSection: BatchUpdateSection, Hashable  {
+open class AdapterSection<ItemType: DeepHashable & UniqIdentifier>:
+    BatchUpdateSection,
+    Hashable,
+SectionUniqIdentifier {
+    
     // MARK: - Properties
     /// Идентификатор
     public let id: String
-    public private(set) var rows: [RowConfigurable] = []
-    
-    // MARK: Header / Footer
-    /// Заголовок хедера секции (Внимание! Возможно установить или headerString, или headerView)
-    /// Приоритет имеет headerView
-    public var headerString: String?
-    /// Высота хедера
-    public var headerHeight: CGFloat?
-    /// CustomView для хедера секции (Внимание! Возможно установить или headerString, или headerView)
-    /// Приоритет имеет headerView
-    public var headerView: UIView?
-    
-    /// Заголовок футера секции (Внимание! Возможно установить или footerString, или footerView)
-    /// Приоритет имеет footerView
-    public var footerString: String?
-    /// Высота футера
-    public var footerHeight: CGFloat?
-    /// CustomView для футера секции (Внимание! Возможно установить или footerString, или footerView)
-    /// Приоритет имеет footerView
-    public var footerView: UIView?
+    public private(set) var rows: [ItemType] = []
 
     // MARK: - Init
-    public init(with id: String) {
+    public required init(with id: String) {
         self.id = id
     }
     
@@ -39,7 +21,7 @@ open class AdapterSection: BatchUpdateSection, Hashable  {
         return rows.isEmpty
     }
     
-    /// Количество строк в секции
+    /// Количество элементов в секции
     public var numberOfRows: Int {
         return rows.count
     }
@@ -48,14 +30,14 @@ open class AdapterSection: BatchUpdateSection, Hashable  {
     /// Добавить строку в секцию
     ///
     /// - Parameter row: Добавляемая строка
-    public func append(row: RowConfigurable) {
+    public func append(row: ItemType) {
         rows.append(row)
     }
     
     /// Добавить строки в секцию
     ///
     /// - Parameter rows: Добавляемые строки
-    public func append(rows: [RowConfigurable]) {
+    public func append(rows: [ItemType]) {
         self.rows.append(contentsOf: rows)
     }
     
@@ -64,7 +46,7 @@ open class AdapterSection: BatchUpdateSection, Hashable  {
     /// - Parameters:
     ///   - row: Вставляемая строка
     ///   - index: Индекс вставки
-    public func insert(row: RowConfigurable, at index: Int) {
+    public func insert(row: ItemType, at index: Int) {
         rows.insert(row, at: index)
     }
     
@@ -73,7 +55,7 @@ open class AdapterSection: BatchUpdateSection, Hashable  {
     /// - Parameters:
     ///   - rows: Вставляемые строки
     ///   - index: Начиная с какого индекса вставлять
-    public func insert(rows: [RowConfigurable], at index: Int) {
+    public func insert(rows: [ItemType], at index: Int) {
         self.rows.insert(contentsOf: rows, at: index)
     }
     
@@ -82,7 +64,7 @@ open class AdapterSection: BatchUpdateSection, Hashable  {
     /// - Parameter index: Индекс удаляемой строки
     /// - Returns: Удаленная строка
     @discardableResult
-    public func remove(rowAt index: Int) -> RowConfigurable {
+    public func remove(rowAt index: Int) -> ItemType {
         return rows.remove(at: index)
     }
     
@@ -95,7 +77,7 @@ open class AdapterSection: BatchUpdateSection, Hashable  {
     /// Найдет и вернет строку с переданным id или nil иначе
     ///
     /// - Parameter id: Идентификатор строки
-    public subscript(id: Int) -> RowConfigurable? {
+    public subscript(id: Int) -> ItemType? {
         get {
             return self["\(id)"]
         }
@@ -104,7 +86,7 @@ open class AdapterSection: BatchUpdateSection, Hashable  {
     /// Найдет и вернет строку с переданным id или nil иначе
     ///
     /// - Parameter id: Идентификатор строки
-    public subscript(id: String) -> RowConfigurable? {
+    public subscript(id: String) -> ItemType? {
         get {
             for row in rows where row.id == id {
                 return row
@@ -121,13 +103,12 @@ open class AdapterSection: BatchUpdateSection, Hashable  {
 
     public static func == (lhs: AdapterSection, rhs: AdapterSection) -> Bool {
         guard lhs.id == rhs.id else { return false }
-        guard lhs.headerString == rhs.headerString else { return false }
-        guard lhs.headerHeight == rhs.headerHeight else { return false }
-        guard lhs.headerView == rhs.headerView else { return false }
-        guard lhs.footerString == rhs.footerString else { return false }
-        guard lhs.footerHeight == rhs.footerHeight else { return false }
-        guard lhs.footerView == rhs.footerView else { return false }
         return true
+    }
+
+    public func equal(object: Any?) -> Bool {
+        guard let object = object as? AdapterSection else { return false }
+        return self == object
     }
 
     // MARK: - BatchUpdateSection

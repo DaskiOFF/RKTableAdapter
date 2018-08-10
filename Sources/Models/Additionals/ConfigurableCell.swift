@@ -23,7 +23,7 @@ public protocol ConfigureCell: class {
 public protocol ConfigurableCell: BindingCell, ConfigureCell {
     // MARK: Types
     /// Тип View Model
-    associatedtype ViewModelType: CellVM & Equatable
+    associatedtype ViewModelType: SuperCellVM & Equatable
     var viewModel: ViewModelType? { get set }
     
     // MARK: Properties
