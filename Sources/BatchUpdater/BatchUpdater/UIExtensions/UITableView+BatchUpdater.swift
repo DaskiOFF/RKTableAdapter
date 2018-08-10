@@ -5,11 +5,17 @@ extension UITableView {
         if #available(iOS 11.0, *) {
             performBatchUpdates({
                 updateActions(sectionsChanges: sectionsChanges, sectionChanges: sectionChanges)
+            }, completion: nil)
+
+            performBatchUpdates({
+                reloadRows(at: sectionChanges.updates, with: .fade)
             }, completion: completion)
-            reloadRows(at: sectionChanges.updates, with: .fade)
         } else {
             beginUpdates()
             updateActions(sectionsChanges: sectionsChanges, sectionChanges: sectionChanges)
+            endUpdates()
+            
+            beginUpdates()
             reloadRows(at: sectionChanges.updates, with: .fade)
             endUpdates()
 

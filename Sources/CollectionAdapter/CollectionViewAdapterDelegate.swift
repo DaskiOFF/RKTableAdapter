@@ -1,6 +1,9 @@
 import UIKit
 
-class CollectionViewAdapterDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+class CollectionViewAdapterDelegate: NSObject,
+    UICollectionViewDelegate,
+    UICollectionViewDataSource,
+UICollectionViewDelegateFlowLayout {
     // MARK: - Properties
     unowned var holder: CollectionViewAdapter
     var automaticHeaderFooterHeight: CGFloat = 0
@@ -11,14 +14,25 @@ class CollectionViewAdapterDelegate: NSObject, UICollectionViewDelegate, UIColle
     }
 
     // MARK: - getters
-    private func section(for index: Int) -> AdapterSection? {
+    private func section(for index: Int) -> CollectionSection? {
         guard index < holder.list.sections.count else { return nil }
         return holder.list.sections[index]
     }
 
-    private func row(for section: AdapterSection, index: Int) -> RowConfigurable? {
-        guard index < section.rows.count else { return nil }
+    private func row(for section: CollectionSection, index: Int) -> CollectionItemConfigurable? {
+        guard index < section.numberOfRows else { return nil }
         return section.rows[index]
+    }
+
+    // MARK: - UICollectionViewDelegateFlowLayout
+    // MARK: Size
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let row = holder.list.sections[indexPath.section].rows[indexPath.row]
+
+        guard let size = row.cellVM.defaultSize ?? row.cellVM.estimatedSize else {
+            fatalError("Need size for cell")
+        }
+        return size
     }
 
     // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
@@ -34,13 +48,15 @@ class CollectionViewAdapterDelegate: NSObject, UICollectionViewDelegate, UIColle
         row.cellVM.action?(row.cellVM.userInfo ?? row.cellVM)
     }
 
+
+
     // MARK: Number sections, items
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return holder.list.sections.count
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return holder.list.sections[section].rows.count
+        return holder.list.sections[section].numberOfRows
     }
 
     // MARK: Cell

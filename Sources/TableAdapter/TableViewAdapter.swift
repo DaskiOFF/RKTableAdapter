@@ -62,9 +62,9 @@ import UIKit
 open class TableViewAdapter {
 
     // MARK: - Properties
-    private var _list: AdapterList = AdapterList()
+    private var _list: TableList = TableList()
     /// Описание данных таблицы
-    public var list: AdapterList { return _list }
+    public var list: TableList { return _list }
 
     private var tableViewDelegate: TableViewAdapterDelegate!
 
@@ -99,7 +99,7 @@ open class TableViewAdapter {
     }
 
     // MARK: - Reload
-    public func reload(with tableList: AdapterList? = nil) {
+    public func reload(with tableList: TableList? = nil) {
         let oldList = self._list
 
         if let list = tableList {

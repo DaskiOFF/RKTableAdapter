@@ -11,13 +11,8 @@ class JustCollectionCellVM: CollectionCellVM, Equatable {
         super.init(action: nil, userInfo: nil)
     }
 
-    // MARK: - RowHeightComputable
-    override var defaultHeight: CGFloat? {
-        return 44
-    }
-
     // MARK: - CollectionItemSizeComputable
-    var defaultSize: CGSize? {
+    override var defaultSize: CGSize? {
         return CGSize(width: 50, height: 50)
     }
 

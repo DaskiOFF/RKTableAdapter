@@ -1,5 +1,5 @@
 PODS:
-  - RKTableAdapter (0.1.7)
+  - RKTableAdapter (0.1.8)
 
 DEPENDENCIES:
   - RKTableAdapter (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RKTableAdapter: 76ff4605555d6340856c794d3c5731c5df52d799
+  RKTableAdapter: ad40fa4b479a76ab97dfde8b570e3f43e782589b
 
 PODFILE CHECKSUM: 053520554ca25f6d1408fc0ee8a805717f15b0e5
 

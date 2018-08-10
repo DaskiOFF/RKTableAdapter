@@ -23,13 +23,13 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
     }
 
     // MARK: - getters
-    private func section(for index: Int) -> AdapterSection? {
+    private func section(for index: Int) -> TableSection? {
         guard index < holder.list.sections.count else { return nil }
         return holder.list.sections[index]
     }
 
-    private func row(for section: AdapterSection, index: Int) -> RowConfigurable? {
-        guard index < section.rows.count else { return nil }
+    private func row(for section: TableSection, index: Int) -> TableRowConfigurable? {
+        guard index < section.numberOfRows else { return nil }
         return section.rows[index]
     }
 
@@ -37,8 +37,8 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
     // MARK: Size
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let row = holder.list.sections[indexPath.section].rows[indexPath.row]
-        return row.defaultHeight ??
-            row.estimatedHeight ??
+        return row.cellVM.defaultHeight ??
+            row.cellVM.estimatedHeight ??
         TableViewAutomaticDimension
     }
 
@@ -60,7 +60,7 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return holder.list.sections[section].rows.count
+        return holder.list.sections[section].numberOfRows
     }
 
     // MARK: Cell

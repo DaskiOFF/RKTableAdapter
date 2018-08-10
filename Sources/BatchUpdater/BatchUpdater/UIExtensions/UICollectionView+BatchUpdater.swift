@@ -5,6 +5,10 @@ extension UICollectionView {
         performBatchUpdates({
             updateActions(sectionsChanges: sectionsChanges, sectionChanges: sectionChanges)
         }, completion: completion)
+
+        performBatchUpdates({
+            reloadItems(at: sectionChanges.updates)
+        }, completion: completion)
     }
 
     // MARK: - Private
@@ -26,6 +30,5 @@ extension UICollectionView {
             }
             moveItem(at: move.from, to: move.to)
         }
-        reloadItems(at: sectionChanges.updates)
     }
 }

@@ -4,9 +4,9 @@ import UIKit
 open class CollectionViewAdapter {
 
     // MARK: - Properties
-    private var _list: AdapterList = AdapterList()
+    private var _list: AdapterList = CollectionList()
     /// Описание данных таблицы
-    public var list: AdapterList { return _list }
+    public var list: CollectionList { return _list }
 
     private var collectionViewDelegate: CollectionViewAdapterDelegate!
 
@@ -41,10 +41,10 @@ open class CollectionViewAdapter {
     }
 
     // MARK: - Reload
-    public func reload(with tableList: AdapterList? = nil) {
+    public func reload(with collectionList: CollectionList? = nil) {
         let oldList = self._list
 
-        if let list = tableList {
+        if let list = collectionList {
             self._list = list
         } else {
             self._list = AdapterList()
