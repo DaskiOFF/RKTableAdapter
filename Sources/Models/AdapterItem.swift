@@ -1,9 +1,9 @@
 import UIKit
 
-public typealias TableRow = AdapterRow
-public typealias CollectionItem = AdapterRow
+public typealias TableRow = AdapterItem
+public typealias CollectionItem = AdapterItem
 
-open class AdapterRow<CellType: ConfigurableCell>: RowConfigurable {
+open class AdapterItem<CellType: ConfigurableCell>: RowConfigurable {
     // MARK: - Properties
     /// Модель данных
     public let viewModel: CellType.ViewModelType
@@ -89,7 +89,7 @@ open class AdapterRow<CellType: ConfigurableCell>: RowConfigurable {
     // MARK: - DeepHashable
     /// :nodoc:
     public override func equal(object: Any?) -> Bool {
-        guard let object = object as? AdapterRow<CellType> else { return false }
+        guard let object = object as? AdapterItem<CellType> else { return false }
 
         return self.viewModel == object.viewModel
     }
