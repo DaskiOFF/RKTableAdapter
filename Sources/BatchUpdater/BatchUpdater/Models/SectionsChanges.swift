@@ -1,7 +1,7 @@
 import Foundation
 
 /// Changes in sections list
-struct SectionsChanges {
+struct SectionsChanges: CustomStringConvertible {
     /// from (index before deletes), to (index after update)
     struct Move: Equatable {
         var from: Int
@@ -24,5 +24,15 @@ struct SectionsChanges {
         sortedResult.inserts = IndexSet(sortedResult.inserts.sorted(by: <))
 
         return sortedResult
+    }
+
+    // MARK: - CustomStringConvertible
+    var description: String {
+        return """
+        deletes: [\(deletes.map { $0 })]
+        insert: [\(inserts.map { $0 })]
+        moves: [\(moves.map { "\($0.from) -> \($0.to)" })]
+        updates: [\(updates.map { $0 })]
+        """
     }
 }

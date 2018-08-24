@@ -7,11 +7,34 @@
 [![Swift Version](https://img.shields.io/badge/Swift-4.0–4.2-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 [![License](https://img.shields.io/cocoapods/l/RKTableAdapter.svg?style=flat)](https://cocoapods.org/pods/RKTableAdapter)
 
+## Content
+- [Documentations](#documentations)
+- [Usage UITableView](#usage-uitableview)
+- [Usage UICollectionView](#usage-uicollectionview)
+- [Cell Templates](#cell-templates)
+    - [Usage templates](#usage-templates)
+- [Installation](#installation)
+- [Author](#author)
+- [License](#license)
+- [Info](#dependencies)
+
 ## Documentations
 
 https://daskioff.github.io/RKTableAdapter/
 
 How use -> https://daskioff.github.io/RKTableAdapter/Classes/TableViewAdapter.html
+
+## Usage UITableView 
+
+- Ячейка должна реализовывать протокол ConfigurableCell
+- ViewModel ячейки должна наследоваться от CellVM
+- Необходимо его создать используя UITableView
+
+```swift
+
+```
+
+## Usage UICollectionView
 
 ## Cell Templates
 Generate Cell from templates with [Jessica](https://github.com/daskioff/jessica)
@@ -24,7 +47,7 @@ jessica generator pull github.com/daskioff/jessica_templates rk_table_adapter
 
 Fix `output_paths` in `templates.yml` for your project
 
-### Usage
+### Usage templates
 
 [Jessica Generator](https://github.com/DaskiOFF/jessica#generator)
 

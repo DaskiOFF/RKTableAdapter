@@ -30,6 +30,15 @@ open class TableAdapterCallbacks {
     public func setCommitEditRow(_ block: CommitEditRow?) {
         commitEditRow = block
     }
+
+    // MARK: - Select
+    public typealias DidSelectRow = (UITableView, IndexPath, TableData) -> Void
+
+    private(set) var didSelectRow: DidSelectRow?
+
+    public func setDidSelectRow(_ block: DidSelectRow?) {
+        didSelectRow = block
+    }
     
     // MARK: - Header / Footer
     public typealias WillDisplayHeaderFooterView = (UITableView, UIView, TableSection, Int) -> Void

@@ -59,6 +59,9 @@ open class TableRow<CellType: ConfigurableCell>: TableRowConfigurable {
     public override func equal(object: Any?) -> Bool {
         guard let object = object as? TableRow<CellType> else { return false }
 
-        return self.viewModel == object.viewModel
+        guard self.id == object.id else { return false }
+        guard self.viewModel == object.viewModel else { return false }
+        return true
+
     }
 }
