@@ -1,7 +1,7 @@
 import Foundation
 import RKTableAdapter
 
-class JustCellVM: CellVM, Equatable {
+class JustCellVM: TableCellVM, Equatable {
     // MARK: - Properties
     var title: String = ""
 
