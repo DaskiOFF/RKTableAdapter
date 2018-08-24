@@ -18,7 +18,7 @@ custom_categories:
     - TableSection
     - TableRow
 
-  - name: Main Colection
+  - name: Main Collection
     children:
     - CollectionViewAdapter
     - CollectionAdapterCallbacks
