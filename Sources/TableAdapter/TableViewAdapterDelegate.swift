@@ -52,6 +52,20 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
             tableView.deselectRow(at: indexPath, animated: true)
         }
         row.cellVM.action?(row.cellVM.userInfo ?? row.cellVM)
+
+        guard let didSelectRowClosure = holder.callbacks.didSelectRow else { return }
+        var newIndexPath: IndexPath?
+        for (i, s) in holder.list.sections.enumerated() {
+            for (j, r) in s.rows.enumerated() {
+                if r.id == row.id {
+                    newIndexPath = IndexPath(row: j, section: i)
+                    break
+                }
+            }
+        }
+        if let newIndexPath = newIndexPath {
+            didSelectRowClosure(tableView, newIndexPath, (section, row))
+        }
     }
 
     // MARK: Number sections, items

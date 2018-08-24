@@ -54,9 +54,9 @@ class TestBatchUpdateTests: XCTestCase {
         let rowsDeletes: [IndexPath] = []
         let rowsInserts: [IndexPath] = []
         let rowsUpdates: [IndexPath] = [IndexPath(row: 1, section: 5)]
-        let rowsMoves: [SectionChanges.Move] = [SectionChanges.Move(from: IndexPath(row: 1, section: 5),
+        let rowsMoves: [RowsChanges.Move] = [RowsChanges.Move(from: IndexPath(row: 1, section: 5),
                                                                     to: IndexPath(row: 0, section: 6)),
-                                                SectionChanges.Move(from: IndexPath(row: 0, section: 5),
+                                                RowsChanges.Move(from: IndexPath(row: 0, section: 5),
                                                                     to: IndexPath(row: 1, section: 6))]
         XCTAssert(rowsDeletes == batchRowsIndexPaths.deletes,
                   "\(rowsDeletes.map({ $0 })) != \(batchRowsIndexPaths.deletes.map({ $0 }))")
@@ -64,7 +64,7 @@ class TestBatchUpdateTests: XCTestCase {
         XCTAssert(rowsInserts == batchRowsIndexPaths.inserts,
                   "\(rowsInserts.map({ $0 })) != \(batchRowsIndexPaths.inserts.map({ $0 }))")
 
-        XCTAssert(rowsUpdates == batchRowsIndexPaths.updates,
+        XCTAssert(rowsUpdates == batchRowsIndexPaths.updates.map { $0.new },
                   "\(rowsUpdates.map({ $0 })) != \(batchRowsIndexPaths.updates.map({ $0 }))")
 
         XCTAssert(rowsMoves == batchRowsIndexPaths.moves,
@@ -97,9 +97,9 @@ class TestBatchUpdateTests: XCTestCase {
         let rowsDeletes: [IndexPath] = []
         let rowsInserts: [IndexPath] = []
         let rowsUpdates: [IndexPath] = [IndexPath(row: 1, section: 3)]
-        let rowsMoves: [SectionChanges.Move] = [SectionChanges.Move(from: IndexPath(row: 1, section: 6),
+        let rowsMoves: [RowsChanges.Move] = [RowsChanges.Move(from: IndexPath(row: 1, section: 6),
                                                                     to: IndexPath(row: 0, section: 5)),
-                                                SectionChanges.Move(from: IndexPath(row: 0, section: 6),
+                                                RowsChanges.Move(from: IndexPath(row: 0, section: 6),
                                                                     to: IndexPath(row: 1, section: 5))]
         XCTAssert(rowsDeletes == batchRowsIndexPaths.deletes,
                   "\(rowsDeletes.map({ $0 })) != \(batchRowsIndexPaths.deletes.map({ $0 }))")
@@ -107,7 +107,7 @@ class TestBatchUpdateTests: XCTestCase {
         XCTAssert(rowsInserts == batchRowsIndexPaths.inserts,
                   "\(rowsInserts.map({ $0 })) != \(batchRowsIndexPaths.inserts.map({ $0 }))")
 
-        XCTAssert(rowsUpdates == batchRowsIndexPaths.updates,
+        XCTAssert(rowsUpdates == batchRowsIndexPaths.updates.map { $0.new },
                   "\(rowsUpdates.map({ $0 })) != \(batchRowsIndexPaths.updates.map({ $0 }))")
 
         XCTAssert(rowsMoves == batchRowsIndexPaths.moves,

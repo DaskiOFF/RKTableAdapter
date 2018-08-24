@@ -18,8 +18,8 @@ RowHeightComputable {
 
     // MARK: - Properties
     /// Выделяемая ячейка или нет
-    public var isSelectable: Bool = true
-    public var accessoryType: TableViewCellAccessoryType = .none
+    open var isSelectable: Bool = true
+    open var accessoryType: TableViewCellAccessoryType = .none
 
     // MARK: - RowHeightComputable
     open var estimatedHeight: CGFloat? {

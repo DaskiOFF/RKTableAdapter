@@ -9,7 +9,7 @@ copyright: '© 2018 [DaskiOFF](http://t.me/daskioff) under MIT License'
 swift_version: 4.1
 
 custom_categories:
-  - name: Main
+  - name: Main Table
     children:
     - TableViewAdapter
     - TableAdapterCallbacks
@@ -17,6 +17,15 @@ custom_categories:
     - TableList
     - TableSection
     - TableRow
+
+  - name: Main Colection
+    children:
+    - CollectionViewAdapter
+    - CollectionAdapterCallbacks
+    - CollectionAdapterScrollViewCallbacks
+    - CollectionList
+    - CollectionSection
+    - CollectionItem
 
   - name: Cell ViewModel
     children:

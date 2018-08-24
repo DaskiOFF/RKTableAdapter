@@ -3,7 +3,7 @@ import UIKit
 open class TableRowSwitch: TableRow<TableSwitchCell> { }
 
 // MARK: - ViewModel
-open class TableSwitchCellVM: CellVM, Equatable {
+open class TableSwitchCellVM: TableCellVM, Equatable {
     public typealias ChangeActionType = (TableSwitchCellVM) -> Void
     // MARK: Variables
     public var title: String = "" {

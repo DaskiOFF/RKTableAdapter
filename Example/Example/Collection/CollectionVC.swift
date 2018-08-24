@@ -65,7 +65,7 @@ class CollectionVC: UIViewController {
 
     // MARK: - CollectionAdapter
     private func setupCollectionAdapter() {
-
+        
     }
 
     private func configureCollectionAdapterContent() {

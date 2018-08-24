@@ -1,66 +1,7 @@
 import Foundation
 import UIKit
 
-/// Для работы с TableViewAdapter
-/// - Ячейка должна реализовывать протокол ConfigurableCell
-/// - ViewModel ячейки должна наследоваться от CellVM
-///
-/// - Необходимо его создать используя UITableView
-///
-///         let tableView: UITableView = UITableView(frame: .zero, style: .grouped)
-///         lazy var tableAdapter = TableViewAdapter(tableView: self.tableView)
-///
-/// - Создать контент для таблицы
-///
-///         private func configureTableAdapterContent() {
-///             let tableList = TableList()
-///
-///             makeMySection(tableList)
-///
-///             tableAdapter.reload(with: tableList)
-///         }
-///
-///         private func makeMySection(_ list: TableList) {
-///             let section = list["mySection"]
-///             section.headerHeight = 30
-///             section.footerHeight = 40
-///
-///             do {
-///                 let viewModel = TableSwitchCellVM(title: "Автосохранение", isOn: true)
-///                 vmAutosave.changeAction = autosaveStateChanged
-///
-///                 let switchRow = TableRowSwitch(viewModel: vmAutosave)
-///                 section.append(row: switchRow)
-///             }
-///
-///             do {
-///                 let vm = MenuItemCellVM(title: "Поделиться", action: share)
-///                 section.append(row: TableRow<MenuItemCell>(id: "share", viewModel: vm))
-///             }
-///         }
-///
-/// - Описать замыкания для действий
-///
-///         private lazy var share: CellVM.ActionType = { [weak self] _ in
-///             guard let sself = self else { return }
-///
-///             // do sth...
-///         }
-///
-/// - Если необходимо настроить обработку callbacks, то это делаем в методе
-///
-///         private func setupTableAdapter() {
-///             // tableAdapter.callbacks...
-///             // tableAdapter.scrollViewCallbacks...
-///         }
-///     который вызываем из viewDidLoad
-///
-///
-/// - Для перезагрузки таблицы
-///
-///         tableAdapter.reload(with: tableList)
 open class TableViewAdapter {
-
     // MARK: - Properties
     private var _list: TableList = TableList()
     /// Описание данных таблицы

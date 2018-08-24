@@ -7,24 +7,60 @@ protocol BatchUpdateSection: DeepHashable {
 
 class BatchUpdater {
     public func batchUpdate(tableView: UITableView, oldSections: [BatchUpdateSection], newSections: [BatchUpdateSection], completion: ((Bool) -> Void)?) {
-        let changes = self.changes(forOldSection: oldSections, and: newSections)
+        var changes = self.changes(forOldSection: oldSections, and: newSections)
+
+        var filteredUpdates: [RowsChanges.Update] = []
+        var changedData: [ChangedData] = []
+
+        for updateInfo in changes.rowsChanges.updates {
+            guard let oldIndexPath = updateInfo.old, let index = (tableView.indexPathsForVisibleRows ?? []).index(of: oldIndexPath) else {
+                filteredUpdates.append(updateInfo)
+                continue
+            }
+
+            guard let oldSections = oldSections as? [TableSection],
+                let newSections = newSections as? [TableSection] else {
+                    filteredUpdates.append(updateInfo)
+                    continue
+            }
+
+            let oldRow = oldSections[oldIndexPath.section].rows[oldIndexPath.row]
+            let newRow = newSections[updateInfo.new.section].rows[updateInfo.new.row]
+
+            guard oldRow.deepDiffHash == newRow.deepDiffHash &&
+                oldRow.cellVM.accessoryType == newRow.cellVM.accessoryType else {
+                    filteredUpdates.append(updateInfo)
+                    continue
+            }
+            let visibleCells = tableView.visibleCells
+            if index < visibleCells.count {
+                changedData.append(ChangedData(oldRow: oldRow,
+                                               oldIndexPath: oldIndexPath,
+                                               newRow: newRow,
+                                               newIndexPath: updateInfo.new))
+            } else {
+                filteredUpdates.append(updateInfo)
+            }
+        }
+
+        changes.rowsChanges.updates = filteredUpdates
         tableView.performBatchUpdates(sectionsChanges: changes.sectionsChanges,
-                                     sectionChanges: changes.rowsChanges,
-                                     completion: completion)
+                                      rowsChanges: changes.rowsChanges,
+                                      changedData: changedData,
+                                      completion: completion)
     }
 
     public func batchUpdate(collectionView: UICollectionView, oldSections: [BatchUpdateSection], newSections: [BatchUpdateSection], completion: ((Bool) -> Void)?) {
         let changes = self.changes(forOldSection: oldSections, and: newSections)
         collectionView.performBatchUpdates(sectionsChanges: changes.sectionsChanges,
-                                     sectionChanges: changes.rowsChanges,
+                                     rowsChanges: changes.rowsChanges,
                                      completion: completion)
     }
 
     // MARK: - Private
-    func changes(forOldSection oldSections: [BatchUpdateSection], and newSections: [BatchUpdateSection]) -> (sectionsChanges: SectionsChanges, rowsChanges: SectionChanges) {
-        var changesSections = diffSet(oldList: oldSections.map({ Box(value: $0) }),
-                                      list: newSections.map({ Box(value: $0) }))
-        var rowsChanges = SectionChanges()
+    func changes(forOldSection oldSections: [BatchUpdateSection], and newSections: [BatchUpdateSection]) -> (sectionsChanges: SectionsChanges, rowsChanges: RowsChanges) {
+        var changesSections = diffSet(oldList: oldSections, list: newSections)
+        var rowsChanges = RowsChanges()
 
         let hashsSectionsReloads = deepHashsSectionsReloads(for: changesSections,
                                                             oldList: oldSections,
@@ -149,44 +185,37 @@ class BatchUpdater {
     private func diffIndexPath<T: DeepHashable>(oldList: [T],
                        list: [T],
                        oldSectionIndex: Int,
-                       newSectionIndex: Int) -> SectionChanges {
+                       newSectionIndex: Int) -> RowsChanges {
         let diffResult = diff(old: oldList, new: list)
 
-        var sectionChanges = SectionChanges()
+        var rowsChanges = RowsChanges()
 
         for changeValue in diffResult {
             switch changeValue {
             case .delete(let del):
-                sectionChanges.deletes.append(IndexPath(row: del.index, section: oldSectionIndex))
+                rowsChanges.deletes.append(IndexPath(row: del.index, section: oldSectionIndex))
 
             case .insert(let ins):
-                sectionChanges.inserts.append(IndexPath(row: ins.index, section: newSectionIndex))
+                rowsChanges.inserts.append(IndexPath(row: ins.index, section: newSectionIndex))
 
             case .move(let move):
-                sectionChanges.moves.append(SectionChanges.Move(from: IndexPath(row: move.fromIndex, section: oldSectionIndex),
+                rowsChanges.moves.append(RowsChanges.Move(from: IndexPath(row: move.fromIndex, section: oldSectionIndex),
                                                                 to: IndexPath(row: move.toIndex, section: newSectionIndex)))
 
             case .replace(let repl):
-                sectionChanges.updates.append(IndexPath(row: repl.index, section: newSectionIndex))
-            }
-        }
-
-        var deletesInSection = sectionChanges.deletes.enumerated().filter({ $0.element.section == oldSectionIndex })
-        var insertsInSection = sectionChanges.inserts.enumerated().filter({ $0.element.section == newSectionIndex })
-        for i in stride(from: deletesInSection.count - 1, through: 0, by: -1) {
-            let delete = deletesInSection[i]
-            for j in stride(from: insertsInSection.count - 1, through: 0, by: -1) {
-                let insert = insertsInSection[j]
-
-                if delete.element.row == insert.element.row {
-                    sectionChanges.updates.append(IndexPath(row: insert.element.row, section: insert.element.section))
-                    sectionChanges.deletes.remove(at: delete.offset)
-                    sectionChanges.inserts.remove(at: insert.offset)
+                let newIndex = repl.index
+                guard let oldIndex = oldList.index(where: { $0.equal(object: repl.oldItem) }) else {
+                    rowsChanges.updates.append(
+                        RowsChanges.Update(old: nil, new: IndexPath(row: newIndex, section: newSectionIndex)))
                     break
                 }
+                rowsChanges.updates.append(
+                    RowsChanges.Update(old: IndexPath(row: oldIndex, section: oldSectionIndex),
+                                          new: IndexPath(row: newIndex, section: newSectionIndex)))
+
             }
         }
 
-        return sectionChanges
+        return rowsChanges
     }
 }

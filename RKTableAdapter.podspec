@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RKTableAdapter'
-  s.version          = '0.1.9'
+  s.version          = '0.1.10'
   s.summary          = 'Table Adapter'
 
 # This description is used to generate tags and improve search results.
@@ -19,6 +19,11 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
   Table Adapter
+  0.1.10
+    Refactoring
+    Update table cell without reloadRow if possible
+    Delete + Insert to the same indexPath is no longer converted to an update (https://github.com/Instagram/IGListKit/issues/297)
+
   0.1.9
     Refactoring
     Fix batch update
@@ -53,6 +58,7 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/DaskiOFF/RKTableAdapter'
+  s.documentation_url = 'https://daskioff.github.io/RKTableAdapter/'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'DaskiOFF' => 'waydeveloper@gmail.com' }

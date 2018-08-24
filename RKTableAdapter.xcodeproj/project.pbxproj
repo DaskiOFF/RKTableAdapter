@@ -11,7 +11,7 @@
 		BB27992320FA8F9B00056FD8 /* BatchUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990B20FA8F9A00056FD8 /* BatchUpdater.swift */; };
 		BB27992420FA8F9B00056FD8 /* SectionsChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990D20FA8F9A00056FD8 /* SectionsChanges.swift */; };
 		BB27992520FA8F9B00056FD8 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990E20FA8F9A00056FD8 /* Box.swift */; };
-		BB27992620FA8F9B00056FD8 /* SectionChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990F20FA8F9A00056FD8 /* SectionChanges.swift */; };
+		BB27992620FA8F9B00056FD8 /* RowsChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27990F20FA8F9A00056FD8 /* RowsChanges.swift */; };
 		BB27992720FA8F9B00056FD8 /* UICollectionView+BatchUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991120FA8F9A00056FD8 /* UICollectionView+BatchUpdater.swift */; };
 		BB27992820FA8F9B00056FD8 /* UITableView+BatchUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991220FA8F9A00056FD8 /* UITableView+BatchUpdater.swift */; };
 		BB27992920FA8F9B00056FD8 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27991520FA8F9A00056FD8 /* Array+Extensions.swift */; };
@@ -53,6 +53,7 @@
 		BBB7ACCE211C6CC9004BA563 /* CollectionViewAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7ACCD211C6CC9004BA563 /* CollectionViewAdapterDelegate.swift */; };
 		BBB7ACD4211CA4E0004BA563 /* CollectionAdapterCallbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7ACD3211CA4E0004BA563 /* CollectionAdapterCallbacks.swift */; };
 		BBBC38D620F3E212001B8ED4 /* TableViewAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */; };
+		BBDFFFA92130827C006BFB6E /* ChangedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDFFFA82130827C006BFB6E /* ChangedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +77,7 @@
 		BB27990B20FA8F9A00056FD8 /* BatchUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchUpdater.swift; sourceTree = "<group>"; };
 		BB27990D20FA8F9A00056FD8 /* SectionsChanges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsChanges.swift; sourceTree = "<group>"; };
 		BB27990E20FA8F9A00056FD8 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
-		BB27990F20FA8F9A00056FD8 /* SectionChanges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionChanges.swift; sourceTree = "<group>"; };
+		BB27990F20FA8F9A00056FD8 /* RowsChanges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowsChanges.swift; sourceTree = "<group>"; };
 		BB27991120FA8F9A00056FD8 /* UICollectionView+BatchUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+BatchUpdater.swift"; sourceTree = "<group>"; };
 		BB27991220FA8F9A00056FD8 /* UITableView+BatchUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+BatchUpdater.swift"; sourceTree = "<group>"; };
 		BB27991520FA8F9A00056FD8 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 		BBB7ACCD211C6CC9004BA563 /* CollectionViewAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterDelegate.swift; sourceTree = "<group>"; };
 		BBB7ACD3211CA4E0004BA563 /* CollectionAdapterCallbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAdapterCallbacks.swift; sourceTree = "<group>"; };
 		BBBC38D520F3E211001B8ED4 /* TableViewAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterDelegate.swift; sourceTree = "<group>"; };
+		BBDFFFA82130827C006BFB6E /* ChangedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangedData.swift; sourceTree = "<group>"; };
 		C8D0D66D03ACA336BAE61E10 /* Pods-RKTableAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RKTableAdapter.release.xcconfig"; path = "Pods/Target Support Files/Pods-RKTableAdapter/Pods-RKTableAdapter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,7 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				BB27990D20FA8F9A00056FD8 /* SectionsChanges.swift */,
-				BB27990F20FA8F9A00056FD8 /* SectionChanges.swift */,
+				BB27990F20FA8F9A00056FD8 /* RowsChanges.swift */,
+				BBDFFFA82130827C006BFB6E /* ChangedData.swift */,
 				BB27990E20FA8F9A00056FD8 /* Box.swift */,
 			);
 			path = Models;
@@ -573,6 +576,7 @@
 				BB27992C20FA8F9B00056FD8 /* WagnerFischer.swift in Sources */,
 				BBB7ACCE211C6CC9004BA563 /* CollectionViewAdapterDelegate.swift in Sources */,
 				BB302456211D5D6400067608 /* CollectionCellVM.swift in Sources */,
+				BBDFFFA92130827C006BFB6E /* ChangedData.swift in Sources */,
 				BB27992B20FA8F9B00056FD8 /* DeepDiff.swift in Sources */,
 				BB302448211D54F300067608 /* SuperCellVM.swift in Sources */,
 				BBBC38D620F3E212001B8ED4 /* TableViewAdapterDelegate.swift in Sources */,
@@ -585,7 +589,7 @@
 				BB27992420FA8F9B00056FD8 /* SectionsChanges.swift in Sources */,
 				BB27992720FA8F9B00056FD8 /* UICollectionView+BatchUpdater.swift in Sources */,
 				BB8C3D24211D53540004C1A5 /* CellCalculator.swift in Sources */,
-				BB27992620FA8F9B00056FD8 /* SectionChanges.swift in Sources */,
+				BB27992620FA8F9B00056FD8 /* RowsChanges.swift in Sources */,
 				BB27993220FA8F9B00056FD8 /* UITableView+Extensions.swift in Sources */,
 				BB302459211D5F0D00067608 /* ItemConfigurable.swift in Sources */,
 				BB27992E20FA8F9B00056FD8 /* Heckel.swift in Sources */,

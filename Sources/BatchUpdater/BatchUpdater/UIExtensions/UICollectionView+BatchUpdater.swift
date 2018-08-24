@@ -1,18 +1,16 @@
 import UIKit
 
 extension UICollectionView {
-    func performBatchUpdates(sectionsChanges: SectionsChanges, sectionChanges: SectionChanges, completion: ((Bool) -> Void)?) {
+    func performBatchUpdates(sectionsChanges: SectionsChanges, rowsChanges: RowsChanges, completion: ((Bool) -> Void)?) {
         performBatchUpdates({
-            updateActions(sectionsChanges: sectionsChanges, sectionChanges: sectionChanges)
+            updateActions(sectionsChanges: sectionsChanges, rowsChanges: rowsChanges)
         }, completion: completion)
 
-        performBatchUpdates({
-            reloadItems(at: sectionChanges.updates)
-        }, completion: completion)
+        reloadItems(at: rowsChanges.updates.map { $0.new })
     }
 
     // MARK: - Private
-    private func updateActions(sectionsChanges: SectionsChanges, sectionChanges: SectionChanges) {
+    private func updateActions(sectionsChanges: SectionsChanges, rowsChanges: RowsChanges) {
         // sections
         deleteSections(sectionsChanges.deletes)
         insertSections(sectionsChanges.inserts)
@@ -22,9 +20,9 @@ extension UICollectionView {
         reloadSections(sectionsChanges.updates)
 
         // items
-        deleteItems(at: sectionChanges.deletes)
-        insertItems(at: sectionChanges.inserts)
-        for move in sectionChanges.moves {
+        deleteItems(at: rowsChanges.deletes)
+        insertItems(at: rowsChanges.inserts)
+        for move in rowsChanges.moves {
             guard !sectionsChanges.deletes.contains(move.from.row) && !sectionsChanges.inserts.contains(move.to.row) else {
                 continue
             }
