@@ -40,10 +40,10 @@
                 <a href="Main.html#/s:14RKTableAdapter9TableLista">TableList</a>
               </li>
               <li class="nav-group-task">
-                <a href="Main.html#/s:14RKTableAdapter12TableSectiona">TableSection</a>
+                <a href="Classes/TableSection.html">TableSection</a>
               </li>
               <li class="nav-group-task">
-                <a href="Main.html#/s:14RKTableAdapter8TableRowa">TableRow</a>
+                <a href="Classes/TableRow.html">TableRow</a>
               </li>
             </ul>
           </li>
@@ -51,7 +51,7 @@
             <a href="Cell ViewModel.html">Cell ViewModel</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/CellVM.html">CellVM</a>
+                <a href="Cell ViewModel.html#/s:14RKTableAdapter6CellVMa">CellVM</a>
               </li>
             </ul>
           </li>
@@ -92,9 +92,6 @@
                 <a href="Classes/AdapterList.html">AdapterList</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/AdapterRow.html">AdapterRow</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/AdapterScrollViewCallbacks.html">AdapterScrollViewCallbacks</a>
               </li>
               <li class="nav-group-task">
@@ -110,6 +107,18 @@
                 <a href="Classes/CollectionAdapterCallbacks.html">CollectionAdapterCallbacks</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/CollectionCellVM.html">CollectionCellVM</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CollectionItem.html">CollectionItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Classes.html#/s:14RKTableAdapter26CollectionItemConfigurableC">CollectionItemConfigurable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Classes.html#/s:14RKTableAdapter17CollectionSectionC">CollectionSection</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/CollectionViewAdapter.html">CollectionViewAdapter</a>
               </li>
               <li class="nav-group-task">
@@ -117,6 +126,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/IndexPathConverter.html">IndexPathConverter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SuperCellVM.html">SuperCellVM</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TableCellVM.html">TableCellVM</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Classes.html#/s:14RKTableAdapter20TableRowConfigurableC">TableRowConfigurable</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/WagnerFischer.html">WagnerFischer</a>
@@ -138,6 +156,12 @@
                 <a href="Extensions/Array.html">Array</a>
               </li>
               <li class="nav-group-task">
+                <a href="Extensions/Character.html">Character</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Extensions/UICollectionView.html">UICollectionView</a>
               </li>
               <li class="nav-group-task">
@@ -156,9 +180,6 @@
           <li class="nav-group-name">
             <a href="Other Protocols.html">Other Protocols</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Protocols/CollectionItemSizeComputable.html">CollectionItemSizeComputable</a>
-              </li>
               <li class="nav-group-task">
                 <a href="Protocols/DeepEquatable.html">DeepEquatable</a>
               </li>
@@ -194,16 +215,7 @@
             <a href="Other Typealiases.html">Other Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Other Typealiases.html#/s:14RKTableAdapter16CollectionCellVMa">CollectionCellVM</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Other Typealiases.html#/s:14RKTableAdapter14CollectionItema">CollectionItem</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Other Typealiases.html#/s:14RKTableAdapter14CollectionLista">CollectionList</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Other Typealiases.html#/s:14RKTableAdapter17CollectionSectiona">CollectionSection</a>
               </li>
             </ul>
           </li>
@@ -221,21 +233,177 @@
 <a href="https://cocoapods.org/pods/RKTableAdapter"><img src="https://img.shields.io/cocoapods/p/RKTableAdapter.svg?style=flat" alt="Platform"></a>
 <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/Swift-4.0%E2%80%934.2-brightgreen.svg?style=flat" alt="Swift Version"></a>
 <a href="https://cocoapods.org/pods/RKTableAdapter"><img src="https://img.shields.io/cocoapods/l/RKTableAdapter.svg?style=flat" alt="License"></a></p>
+<h2 id='content' class='heading'>Content</h2>
+
+<ul>
+<li><a href="#documentations">Documentations</a></li>
+<li><a href="#usage-tableviewadapter-with-uitableview">Usage TableViewAdapter with UITableView</a></li>
+<li><a href="#usage-collectionviewadapter-with-uicollectionview">Usage CollectionViewAdapter with UICollectionView</a></li>
+<li><a href="#cell-templates">Cell Templates</a>
+
+<ul>
+<li><a href="#usage-templates">Usage templates</a></li>
+</ul></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#author">Author</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#dependencies">Info</a></li>
+</ul>
 <h2 id='documentations' class='heading'>Documentations</h2>
 
 <p><a href="https://daskioff.github.io/RKTableAdapter/">https://daskioff.github.io/RKTableAdapter/</a></p>
+<h2 id='usage-tableviewadapter-with-uitableview' class='heading'>Usage TableViewAdapter with UITableView</h2>
 
-<p>How use -&gt; <a href="https://daskioff.github.io/RKTableAdapter/Classes/TableViewAdapter.html">https://daskioff.github.io/RKTableAdapter/Classes/TableViewAdapter.html</a></p>
-<h2 id='cell-templates' class='heading'>Cell Templates</h2>
+<ul>
+<li>Create cell and cellViewModel (<a href="https://github.com/DaskiOFF/jessica_templates/tree/rk_table_adapter/cell/code">Example template</a>)</li>
+<li><a href="https://github.com/DaskiOFF/jessica_templates/blob/rk_table_adapter/table_vc/code/VC.swift">Example template for ViewCOntroller with TableViewAdapter</a></li>
+</ul>
+<h4 id='manual-create-update-viewcontroller' class='heading'>Manual create/update ViewController</h4>
 
-<p>Generate Cell from templates with <a href="https://github.com/daskioff/jessica">Jessica</a></p>
+<ul>
+<li>Create TableViewAdapter
+<code>swift
+// Create
+let tableView: UITableView = UITableView()
+lazy var tableAdapter = TableViewAdapter(tableView: self.tableView)
+</code></li>
+<li>Setup callbacks if needed
+<code>swift
+private func setupTableAdapter() {
+// tableAdapter.callbacks...
+// tableAdapter.scrollViewCallbacks...
+}
+</code></li>
+<li><p>Configure content</p>
+<pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">configureTableAdapterContent</span><span class="p">()</span> <span class="p">{</span>
+<span class="k">let</span> <span class="nv">tableList</span> <span class="o">=</span> <span class="kt">TableList</span><span class="p">()</span>
 
-<p>Download cell templates</p>
+<span class="nf">makeMySection</span><span class="p">(</span><span class="n">tableList</span><span class="p">)</span>
+
+<span class="n">tableAdapter</span><span class="o">.</span><span class="nf">reload</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">tableList</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></li>
+</ul>
+
+<p>private func makeMySection(_ list: TableList) {
+    let section = list[<q>mySection</q>]
+    section.headerHeight = 30
+    section.footerHeight = 40</p>
+<pre class="highlight plaintext"><code>do {
+    let viewModel = TableSwitchCellVM(title: "Autosave", isOn: true)
+    vmAutosave.changeAction = autosaveStateChanged
+
+    let switchRow = TableRowSwitch(viewModel: vmAutosave)
+    section.append(row: switchRow)
+}
+
+do {
+    let vm = MenuItemCellVM(title: "Share", action: share)
+    section.append(row: TableRow&lt;MenuItemCell&gt;(id: "uniq id", viewModel: vm))
+}
+</code></pre>
+
+<p>}</p>
+<pre class="highlight plaintext"><code>- Add actions
+```swift
+private lazy var share: TableCellVM.ActionType = { [weak self] userInfo in
+    guard let sself = self else { return }
+
+    // do smth...
+}
+</code></pre>
+
+<ul>
+<li><p>Update viewDidLoad</p>
+<pre class="highlight swift"><code><span class="k">override</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+<span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+<span class="nf">setupTableAdapter</span><span class="p">()</span>
+<span class="nf">configureTableAdapterContent</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></li>
+</ul>
+<h2 id='usage-collectionviewadapter-with-uicollectionview' class='heading'>Usage CollectionViewAdapter with UICollectionView</h2>
+
+<ul>
+<li><a href="https://github.com/DaskiOFF/jessica_templates/blob/rk_table_adapter/collection_vc/code/VC.swift">Example template for ViewCOntroller with CollectionViewAdapter</a></li>
+<li>Create cell and cellViewModel (<a href="https://github.com/DaskiOFF/jessica_templates/tree/rk_table_adapter/collection_cell/code">Example template</a>)</li>
+</ul>
+<h4 id='manual-create-update-viewcontroller' class='heading'>Manual create/update ViewController</h4>
+
+<ul>
+<li>Create ColelctionViewAdapter
+<code>swift
+// Create
+lazy var collectionViewFlow: UICollectionViewFlowLayout = {
+    let flow = UICollectionViewFlowLayout()
+    // configure flow layout
+    return flow
+}()
+lazy var collectionView: UICollectionView = {
+    let cv = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlow)
+    // configure collection view
+    return cv
+}()
+lazy var collectionAdapter = CollectionViewAdapter(collectionView: collectionView)
+</code></li>
+<li>Setup callbacks if needed
+<code>swift
+private func setupCollectionAdapter() {
+// collectionAdapter.callbacks...
+// collectionAdapter.scrollViewCallbacks...
+}
+</code></li>
+<li><p>Configure content</p>
+<pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">configureCollectionAdapterContent</span><span class="p">()</span> <span class="p">{</span>
+<span class="k">let</span> <span class="nv">collectionList</span> <span class="o">=</span> <span class="kt">CollectionList</span><span class="p">()</span>
+
+<span class="nf">makeTestSection</span><span class="p">(</span><span class="n">collectionList</span><span class="p">)</span>
+
+<span class="n">collectionAdapter</span><span class="o">.</span><span class="nf">reload</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">collectionList</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></li>
+</ul>
+
+<p>private func makeTestSection(_ list: CollectionList) {
+    let section = list[SectionIds.diary.rawValue]</p>
+<pre class="highlight plaintext"><code>do {
+    // let vm = &lt;#Collection Cell VM#&gt;
+    // vm.action = collectionCellAction
+    // section.append(row: TableRow&lt;&lt;#Collection Cell Class#&gt;&gt;(id: "uniq id", viewModel: vm))
+}
+</code></pre>
+
+<p>}</p>
+<pre class="highlight plaintext"><code>- Add actions
+```swift
+private lazy var collectionCellAction: CollectionCellVM.ActionType = { [weak self] _ in
+    guard let sself = self else { return }
+
+    print("cell taped")
+}
+</code></pre>
+
+<ul>
+<li><p>Update viewDidLoad</p>
+<pre class="highlight swift"><code><span class="k">override</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+<span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+<span class="nf">setupCollectionAdapter</span><span class="p">()</span>
+<span class="nf">configureCollectionAdapterContent</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></li>
+</ul>
+<h2 id='templates' class='heading'>Templates</h2>
+
+<p>Generate Cells and ViewControllers from templates with <a href="https://github.com/daskioff/jessica">Jessica</a></p>
+
+<p>Download templates</p>
 <pre class="highlight plaintext"><code>jessica generator pull github.com/daskioff/jessica_templates rk_table_adapter
 </code></pre>
 
 <p>Fix <code>output_paths</code> in <code>templates.yml</code> for your project</p>
-<h3 id='usage' class='heading'>Usage</h3>
+<h3 id='usage-templates' class='heading'>Usage templates</h3>
 
 <p><a href="https://github.com/DaskiOFF/jessica#generator">Jessica Generator</a></p>
 <pre class="highlight plaintext"><code>jessica generator gen cell CELL_NAME

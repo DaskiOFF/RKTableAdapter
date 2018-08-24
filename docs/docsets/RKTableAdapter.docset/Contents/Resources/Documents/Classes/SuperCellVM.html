@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Heckel Class Reference</title>
+    <title>SuperCellVM Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/Heckel" class="dashAnchor"></a>
-    <a title="Heckel Class Reference"></a>
+    <a name="//apple_ref/swift/Class/SuperCellVM" class="dashAnchor"></a>
+    <a title="SuperCellVM Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">RKTableAdapter Docs</a> (31% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">RKTableAdapter Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Heckel Class Reference
+        SuperCellVM Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -225,25 +225,32 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Heckel</h1>
+            <h1>SuperCellVM</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Heckel</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/DiffAware.html">DiffAware</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">SuperCellVM</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Родительский класс для любой ViewModel ячейки</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Types"></a>
+                <a name="//apple_ref/swift/Section/Types" class="dashAnchor"></a>
+                <a href="#/Types">
+                  <h3 class="section-name">Types</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14RKTableAdapter6HeckelCACycfc"></a>
-                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14RKTableAdapter6HeckelCACycfc">init()</a>
+                    <a name="/s:14RKTableAdapter11SuperCellVMC12UserInfoTypea"></a>
+                    <a name="//apple_ref/swift/Alias/UserInfoType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter11SuperCellVMC12UserInfoTypea">UserInfoType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -258,7 +265,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">UserInfoType</span> <span class="o">=</span> <span class="kt">Any</span></code></pre>
 
                         </div>
                       </div>
@@ -268,9 +275,150 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:14RKTableAdapter6HeckelC4diffSayAA6ChangeOyxGGSayxG3old_AI3newtAA12DeepHashableRzlF"></a>
-                    <a name="//apple_ref/swift/Method/diff(old:new:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:14RKTableAdapter6HeckelC4diffSayAA6ChangeOyxGGSayxG3old_AI3newtAA12DeepHashableRzlF">diff(old:new:)</a>
+                    <a name="/s:14RKTableAdapter11SuperCellVMC10ActionTypea"></a>
+                    <a name="//apple_ref/swift/Alias/ActionType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter11SuperCellVMC10ActionTypea">ActionType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Тип замыкания действия при нажатии на ячейку</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ActionType</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Classes/SuperCellVM.html#/s:14RKTableAdapter11SuperCellVMC12UserInfoTypea">UserInfoType</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter11SuperCellVMC21deselectAutomaticallySbvp"></a>
+                    <a name="//apple_ref/swift/Property/deselectAutomatically" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter11SuperCellVMC21deselectAutomaticallySbvp">deselectAutomatically</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Автоматически снимать выделение</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">deselectAutomatically</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/DidSelectAction%20and%20data"></a>
+                <a name="//apple_ref/swift/Section/DidSelectAction and data" class="dashAnchor"></a>
+                <a href="#/DidSelectAction%20and%20data">
+                  <h3 class="section-name">DidSelectAction and data</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter11SuperCellVMC6actionyypSgcSgvp"></a>
+                    <a name="//apple_ref/swift/Property/action" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter11SuperCellVMC6actionyypSgcSgvp">action</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Действие, которое вызывается при нажатии на ячейку</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">SuperCellVM</span><span class="o">.</span><span class="kt"><a href="../Classes/SuperCellVM.html#/s:14RKTableAdapter11SuperCellVMC10ActionTypea">ActionType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter11SuperCellVMC8userInfoypSgvp"></a>
+                    <a name="//apple_ref/swift/Property/userInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter11SuperCellVMC8userInfoypSgvp">userInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Данные, которые передаются в замыкание действия, если эти данные nil, то в замыкание будет передана viewModel (self)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="kt">SuperCellVM</span><span class="o">.</span><span class="kt"><a href="../Classes/SuperCellVM.html#/s:14RKTableAdapter11SuperCellVMC12UserInfoTypea">UserInfoType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Init"></a>
+                <a name="//apple_ref/swift/Section/Init" class="dashAnchor"></a>
+                <a href="#/Init">
+                  <h3 class="section-name">Init</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter11SuperCellVMCACyypSgcSg6action_AD8userInfotcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(action:userInfo:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter11SuperCellVMCACyypSgcSg6action_AD8userInfotcfc">init(action:userInfo:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -285,7 +433,45 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">diff</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">old</span><span class="p">:</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">new</span><span class="p">:</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Enums/Change.html">Change</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">]</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/DeepHashable.html">DeepHashable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../Classes/SuperCellVM.html#/s:14RKTableAdapter11SuperCellVMC10ActionTypea">ActionType</a></span><span class="p">?,</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/SuperCellVM.html#/s:14RKTableAdapter11SuperCellVMC12UserInfoTypea">UserInfoType</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Bind%20/%20Unbind"></a>
+                <a name="//apple_ref/swift/Section/Bind / Unbind" class="dashAnchor"></a>
+                <a href="#/Bind%20/%20Unbind">
+                  <h3 class="section-name">Bind / Unbind</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14RKTableAdapter11SuperCellVMC4viewAA09ConfigureD0_pSgXwvp"></a>
+                    <a name="//apple_ref/swift/Property/view" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14RKTableAdapter11SuperCellVMC4viewAA09ConfigureD0_pSgXwvp">view</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConfigureCell.html">ConfigureCell</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
