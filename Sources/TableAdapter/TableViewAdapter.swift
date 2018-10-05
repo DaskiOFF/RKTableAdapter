@@ -31,8 +31,8 @@ open class TableViewAdapter {
     }
 
     // MARK: - Private
-    fileprivate func registerCells() {
-        for section in list.sections {
+    fileprivate func registerCells(sections: [TableSection]) {
+        for section in sections {
             for row in section.rows {
                 tableView.register(row.cellType, forCellReuseIdentifier: row.reuseId)
             }
@@ -41,6 +41,8 @@ open class TableViewAdapter {
 
     // MARK: - Reload
     public func reload(with tableList: TableList? = nil) {
+        registerCells(sections: tableList?.sections ?? [])
+
         let oldList = self._list
 
         if let list = tableList {
@@ -48,7 +50,6 @@ open class TableViewAdapter {
         } else {
             self._list = AdapterList()
         }
-        registerCells()
 
         if oldList.sections.isEmpty || _list.sections.isEmpty {
             tableView.reloadData()
