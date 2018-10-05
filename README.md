@@ -8,19 +8,34 @@
 [![License](https://img.shields.io/cocoapods/l/RKTableAdapter.svg?style=flat)](https://cocoapods.org/pods/RKTableAdapter)
 
 ## Content
+- [Requirements](#requirements)
 - [Documentations](#documentations)
+- [Installation](#installation)
 - [Usage TableViewAdapter with UITableView](#usage-tableviewadapter-with-uitableview)
 - [Usage CollectionViewAdapter with UICollectionView](#usage-collectionviewadapter-with-uicollectionview)
 - [Cell Templates](#cell-templates)
     - [Usage templates](#usage-templates)
-- [Installation](#installation)
 - [Author](#author)
 - [License](#license)
 - [Info](#dependencies)
 
+## Requirements
+
+- iOS 9.0 and above
+- Swift 4.1
+
 ## Documentations
 
-https://daskioff.github.io/RKTableAdapter/
+Full documentation for the latest release is available [here](https://daskioff.github.io/RKTableAdapter/)
+
+## Installation
+
+RKTableAdapter is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'RKTableAdapter', '~> 0.1'
+```
 
 ## Usage TableViewAdapter with UITableView 
 
@@ -176,22 +191,13 @@ or
 jessica generator gen cell_calc CELL_NAME
 ```
 
-## Installation
-
-RKTableAdapter is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'RKTableAdapter', '~> 0.1'
-```
-
 ## Author
 
 DaskiOFF, waydeveloper@gmail.com
 
 ## License
 
-RKTableAdapter is available under the MIT license. See the LICENSE file for more info.
+RKTableAdapter is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
 
 ## [Dependencies](https://ios-factor.com/dependencies)
 Последний раз проект собирался с версией **Xcode** указанной в файле ```.xcode-version``` ([Подробнее](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md))
