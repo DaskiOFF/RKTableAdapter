@@ -5,7 +5,7 @@ open class CollectionViewAdapter {
 
     // MARK: - Properties
     private let updQueue = DispatchQueue(label: "com.RKTableAdapter.collectionViewAdapter")
-    let semaphore = DispatchSemaphore(value: 1)
+    private let lock = NSLock()
     private var _list: AdapterList = CollectionList()
     /// Описание данных таблицы
     public var list: CollectionList { return _list }
@@ -48,7 +48,7 @@ open class CollectionViewAdapter {
 
         updQueue.async { [weak self] in
             guard let sself = self else { return }
-            _ = sself.semaphore.wait(timeout: .distantFuture)
+            sself.lock.lock() ; defer { sself.lock.unlock() }
 
             let oldList = sself._list
 
@@ -63,18 +63,11 @@ open class CollectionViewAdapter {
 
                 if oldList.sections.isEmpty || sself._list.sections.isEmpty {
                     sself.collectionView.reloadData()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: { [weak self] in
-                        guard let sself = self else { return }
-                        sself.semaphore.signal()
-                    })
                 } else {
                     sself.batchUpdater.batchUpdate(collectionView: sself.collectionView,
                                                    oldSections: oldList.sections,
                                                    newSections: sself.list.sections,
-                                                   completion: { [weak self] _ in
-                                                    guard let sself = self else { return }
-                                                    sself.semaphore.signal()
-                    })
+                                                   completion: nil)
                 }
             }
         }
