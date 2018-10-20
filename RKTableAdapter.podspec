@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RKTableAdapter'
-  s.version          = '0.1.11'
+  s.version          = '0.1.12'
   s.summary          = 'Table Adapter'
 
 # This description is used to generate tags and improve search results.
@@ -19,6 +19,10 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
   Table Adapter
+
+  0.1.12
+    Update estimated height for row and height for row
+    Fix batch updater
   
   0.1.11
     Replace semaphore to NSLock (fix random deinit crash)
