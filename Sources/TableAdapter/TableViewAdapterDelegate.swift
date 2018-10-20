@@ -35,11 +35,14 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
 
     // MARK: - UITableViewDelegate, UITableViewDataSource
     // MARK: Size
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        let row = holder.list.sections[indexPath.section].rows[indexPath.row]
+        return row.cellVM.estimatedHeight ?? row.cellVM.defaultHeight ?? 0
+    }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let row = holder.list.sections[indexPath.section].rows[indexPath.row]
-        return row.cellVM.defaultHeight ??
-            row.cellVM.estimatedHeight ??
-        TableViewAutomaticDimension
+        return row.cellVM.defaultHeight ?? TableViewAutomaticDimension
     }
 
     // MARK: Selecting
