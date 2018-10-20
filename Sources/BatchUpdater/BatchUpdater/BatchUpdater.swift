@@ -27,8 +27,7 @@ class BatchUpdater {
             let oldRow = oldSections[oldIndexPath.section].rows[oldIndexPath.row]
             let newRow = newSections[updateInfo.new.section].rows[updateInfo.new.row]
 
-            guard oldRow.deepDiffHash == newRow.deepDiffHash &&
-                oldRow.cellVM.accessoryType == newRow.cellVM.accessoryType else {
+            guard oldRow.deepDiffHash == newRow.deepDiffHash else {
                     filteredUpdates.append(updateInfo)
                     continue
             }
