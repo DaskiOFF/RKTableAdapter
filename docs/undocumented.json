@@ -751,77 +751,119 @@
     },
     {
       "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
-      "line": 24,
+      "line": 20,
+      "symbol": "TableAdapterCallbacks.TrailingSwipeActionsConfigurationForRow",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
+      "line": 28,
       "symbol": "TableAdapterCallbacks.setCanEditRow(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
-      "line": 27,
+      "line": 31,
       "symbol": "TableAdapterCallbacks.setEditingStyleRow(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
-      "line": 30,
+      "line": 34,
       "symbol": "TableAdapterCallbacks.setCommitEditRow(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
-      "line": 35,
+      "line": 38,
+      "symbol": "TableAdapterCallbacks.setTrailingSwipeActionsConfigurationForRow(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
+      "line": 43,
       "symbol": "TableAdapterCallbacks.DidSelectRow",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
-      "line": 39,
+      "line": 47,
       "symbol": "TableAdapterCallbacks.setDidSelectRow(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
-      "line": 44,
+      "line": 52,
+      "symbol": "TableAdapterCallbacks.WillDisplayCell",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
+      "line": 53,
+      "symbol": "TableAdapterCallbacks.DidEndDisplayingCell",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
+      "line": 58,
+      "symbol": "TableAdapterCallbacks.setWillDisplayCell(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
+      "line": 62,
+      "symbol": "TableAdapterCallbacks.setDidEndDisplayingCell(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
+      "line": 67,
       "symbol": "TableAdapterCallbacks.WillDisplayHeaderFooterView",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
-      "line": 45,
+      "line": 68,
       "symbol": "TableAdapterCallbacks.DidEndDisplayHeaderFooterView",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
-      "line": 52,
+      "line": 75,
       "symbol": "TableAdapterCallbacks.setWillDisplayHeaderView(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
-      "line": 55,
+      "line": 78,
       "symbol": "TableAdapterCallbacks.setWillDisplayFooterView(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
-      "line": 58,
+      "line": 81,
       "symbol": "TableAdapterCallbacks.setDidEndDisplayHeaderView(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/daskioff/Dropbox/work/MyProjects/iOS/_pods/RKTableAdapter/Sources/TableAdapter/Callbacks/TableAdapterCallbacks.swift",
-      "line": 61,
+      "line": 84,
       "symbol": "TableAdapterCallbacks.setDidEndDisplayFooterView(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

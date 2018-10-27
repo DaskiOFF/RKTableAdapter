@@ -36,12 +36,18 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
     // MARK: - UITableViewDelegate, UITableViewDataSource
     // MARK: Size
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        let row = holder.list.sections[indexPath.section].rows[indexPath.row]
-        return row.cellVM.estimatedHeight ?? row.cellVM.defaultHeight ?? 0
+        guard let section = section(for: indexPath.section),
+            let row = row(for: section, index: indexPath.row)
+            else { return 0 }
+
+        return row.cellVM.defaultHeight ?? row.cellVM.estimatedHeight ?? 0
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let row = holder.list.sections[indexPath.section].rows[indexPath.row]
+        guard let section = section(for: indexPath.section),
+            let row = row(for: section, index: indexPath.row)
+            else { return 0 }
+
         return row.cellVM.defaultHeight ?? TableViewAutomaticDimension
     }
 
@@ -95,17 +101,27 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let row = section(for: indexPath.section)?.rows[indexPath.row] else { return }
+        guard let section = section(for: indexPath.section),
+            let row = row(for: section, index: indexPath.row)
+            else { return }
 
         if let bindingCell = cell as? BindingCell & ConfigureCell {
             row.cellVM.bind(view: bindingCell)
         }
+
+        holder.callbacks.willDisplayCell?(tableView, cell, indexPath, (section, row))
     }
 
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let bindingCell = cell as? BindingCell {
             bindingCell.unbind()
         }
+
+        guard let section = section(for: indexPath.section),
+            let row = row(for: section, index: indexPath.row)
+            else { return }
+
+        holder.callbacks.didEndDisplayingCell?(tableView, cell, indexPath, (section, row))
     }
 
     // MARK: Edit
@@ -128,6 +144,16 @@ class TableViewAdapterDelegate: NSObject, UITableViewDelegate, UITableViewDataSo
             let row = row(for: section, index: indexPath.row)
             else { return .none }
         return holder.callbacks.editingStyleRow?(tableView, indexPath, (section, row)) ?? .none
+    }
+
+    @available(iOS 11.0, *)
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        guard let section = section(for: indexPath.section),
+            let row = row(for: section, index: indexPath.row)
+            else { return nil }
+        guard let callBack = holder.callbacks.trailingSwipeActionsConfigurationForRow as? TableAdapterCallbacks.TrailingSwipeActionsConfigurationForRow else { return nil }
+
+        return callBack(tableView, indexPath, (section, row))
     }
 
     // MARK: Header / Footer
